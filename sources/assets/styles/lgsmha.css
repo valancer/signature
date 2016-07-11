@@ -1,0 +1,10 @@
+/* 
+ * LGFonts
+*/
+@font-face {
+    font-family:'LGSmHa' ; font-style:normal; font-weight: 400; font-style: normal;
+    src: url('/assets/fonts/LGSmHaL.eot');
+    src: url('/assets/fonts/LGSmHaL.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/LGSmHaL.woff') format('woff'),
+    url('/assets/fonts/LGSmHaL.ttf') format('truetype');
+}

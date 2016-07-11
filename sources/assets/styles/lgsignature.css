@@ -1,0 +1,664 @@
+@import url(lgsmha.css);
+/**
+ * variable
+ */
+body {
+  min-width: 1200px;
+  background-color: #fff; }
+
+/* Common Style */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, font, img, ins, q, s, samp, strike, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+  border: 0 none; }
+
+body {
+  position: relative;
+  /*min-height: 800px;*/
+  min-width: 1160px;
+  margin: 0 auto;
+  font-size: 100%;
+  line-height: 1.3em;
+  font-family: "LGSmHa", sans-serif;
+  -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+header, h1 {
+  font-size: 100%; }
+
+html, body {
+  height: 100%; }
+
+caption, legend {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+caption {
+  display: none; }
+
+img {
+  border: none;
+  vertical-align: top;
+  /*width: 100%;*/ }
+
+select, input {
+  vertical-align: top; }
+
+hr {
+  display: none;
+  border: 0 none; }
+
+ol, ul, ul li {
+  list-style: none; }
+
+em {
+  font-style: normal; }
+
+menu li {
+  list-style: none; }
+
+address {
+  display: inline;
+  font-style: normal; }
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border: 0px;
+  background-color: transparent; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, textarea, keygen, select, button {
+  font-family: "LGSmHa", sans-serif; }
+
+strong {
+  font-weight: normal; }
+
+dfn {
+  font-style: normal; }
+
+/* link Style */
+a:link, a:visited, a:active, a:focus {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+.hidden {
+  display: none !important; }
+
+.visible-hidden {
+  visibility: hidden !important; }
+
+.clear {
+  clear: both; }
+
+.txt-center {
+  text-align: center !important; }
+
+/* forms */
+fieldset {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+input[type=submit] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border: 0px; }
+
+::-webkit-input-placeholder {
+  color: #4c4c4c; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #4c4c4c; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #4c4c4c; }
+
+:-ms-input-placeholder {
+  color: #4c4c4c; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/**
+ * z-index
+**/
+/**
+ * mixin
+ */
+/**
+ * import
+ */
+/* contents */
+/* FOOTER */
+.footer {
+  margin: 0 auto;
+  min-width: 1200px;
+  height: 100px;
+  background-color: #111; }
+  .footer > .inner {
+    padding: 0;
+    font-size: 11px;
+    color: #fff;
+    line-height: 100px;
+    transition: padding 0.3s; }
+    @media only screen and (min-width: 1800px) {
+      .footer > .inner {
+        padding: 0 100px;
+        transition: padding 0.3s; } }
+
+/* CONTENTS */
+article.contents {
+  margin: 0 auto;
+  padding: 100px;
+  min-width: 1000px; }
+
+body.main .header {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  min-width: 1200px;
+  height: 960px; }
+  body.main .header .btn-lg-signature {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    z-index: 1;
+    text-indent: -9999px;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -172px 0px;
+    width: 144px;
+    height: 14px; }
+  body.main .header .title-container {
+    position: relative;
+    height: 100%;
+    margin-right: 360px;
+    background: url("/assets/images/main_header.jpg") center center no-repeat;
+    background-size: cover; }
+    body.main .header .title-container .title {
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -96px;
+      height: 192px;
+      width: 100%;
+      font-size: 70px;
+      color: #fffffe;
+      line-height: 1em;
+      text-align: center; }
+      body.main .header .title-container .title small {
+        font-size: 36px; }
+  body.main .header .nav {
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 360px;
+    background-color: #191919; }
+    body.main .header .nav .list-menus {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 0 20px;
+      /* border-top: 1px solid #050505; */ }
+      body.main .header .nav .list-menus > li {
+        border-top: 1px solid #3b3b3b;
+        border-bottom: 1px solid #050505; }
+        body.main .header .nav .list-menus > li a {
+          display: block;
+          position: relative;
+          padding: 30px 0 20px 120px;
+          min-height: 70px;
+          font-size: 16px;
+          color: #bbb;
+          line-height: 29px; }
+          body.main .header .nav .list-menus > li a:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            height: 80px;
+            width: 80px;
+            background-color: 100%; }
+          body.main .header .nav .list-menus > li a p {
+            font-size: 12px;
+            color: #777; }
+          body.main .header .nav .list-menus > li a.event:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: 0px 0px;
+            width: 80px;
+            height: 80px; }
+          body.main .header .nav .list-menus > li a.gallery:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: -86px 0px;
+            width: 80px;
+            height: 80px; }
+          body.main .header .nav .list-menus > li a.episode:before {
+            background-image: url(/assets/images/sprites.png);
+            background-position: 0px -86px;
+            width: 80px;
+            height: 80px; }
+
+body.main .grid {
+  overflow: hidden;
+  margin: 0 -0.310559006211%; }
+  body.main .grid .grid-item {
+    display: block;
+    float: left;
+    margin: 0.310559006211%;
+    width: 21.739130434783%; }
+    body.main .grid .grid-item .content {
+      display: block; }
+    body.main .grid .grid-item.line-breaker {
+      clear: both; }
+    body.main .grid .grid-item.category {
+      color: #fff;
+      text-align: center;
+      background-position: center center;
+      background-size: 100%; }
+      body.main .grid .grid-item.category .content .title {
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -40px;
+        width: 100%;
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+        line-height: 1.3em;
+        transition: font-size 0.3s; }
+        body.main .grid .grid-item.category .content .title small {
+          font-size: 18px;
+          line-height: 1.3em;
+          transition: font-size 0.3s; }
+        @media only screen and (min-width: 1800px) {
+          body.main .grid .grid-item.category .content .title {
+            font-size: 30px;
+            transition: font-size 0.3s; }
+            body.main .grid .grid-item.category .content .title small {
+              font-size: 22px;
+              transition: font-size 0.3s; } }
+    body.main .grid .grid-item .content.aspect-620 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-620:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 56.45161%; }
+      body.main .grid .grid-item .content.aspect-620 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-610 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-610:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 57.37705%; }
+      body.main .grid .grid-item .content.aspect-610 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-590 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-590:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 59.32203%; }
+      body.main .grid .grid-item .content.aspect-590 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-500 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-500:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 70%; }
+      body.main .grid .grid-item .content.aspect-500 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-500-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-500-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 60%; }
+      body.main .grid .grid-item .content.aspect-500-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-490 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-490:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 71.42857%; }
+      body.main .grid .grid-item .content.aspect-490 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-490-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-490-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 61.22449%; }
+      body.main .grid .grid-item .content.aspect-490-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-480 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-480:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 72.91667%; }
+      body.main .grid .grid-item .content.aspect-480 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-480-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-480-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 62.5%; }
+      body.main .grid .grid-item .content.aspect-480-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-470 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-470:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 74.46809%; }
+      body.main .grid .grid-item .content.aspect-470 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-470-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-470-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 63.82979%; }
+      body.main .grid .grid-item .content.aspect-470-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-430 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-430:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 81.39535%; }
+      body.main .grid .grid-item .content.aspect-430 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-430-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-430-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 69.76744%; }
+      body.main .grid .grid-item .content.aspect-430-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-400 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-400:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 87.5%; }
+      body.main .grid .grid-item .content.aspect-400 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-350 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-350:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 100%; }
+      body.main .grid .grid-item .content.aspect-350 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-350-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-350-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 85.71429%; }
+      body.main .grid .grid-item .content.aspect-350-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-310 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-310:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 112.90323%; }
+      body.main .grid .grid-item .content.aspect-310 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-310-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-310-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 96.77419%; }
+      body.main .grid .grid-item .content.aspect-310-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 116.66667%; }
+      body.main .grid .grid-item .content.aspect-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-300-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-300-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 100%; }
+      body.main .grid .grid-item .content.aspect-300-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-280 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-280:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 125%; }
+      body.main .grid .grid-item .content.aspect-280 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-280-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-280-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 107.14286%; }
+      body.main .grid .grid-item .content.aspect-280-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-270 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-270:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 129.62963%; }
+      body.main .grid .grid-item .content.aspect-270 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+    body.main .grid .grid-item .content.aspect-270-300 {
+      position: relative; }
+      body.main .grid .grid-item .content.aspect-270-300:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 111.11111%; }
+      body.main .grid .grid-item .content.aspect-270-300 > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }

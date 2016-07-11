@@ -1,0 +1,87 @@
+body.main { 
+	.header { position: relative; overflow: hidden; margin: 0 auto; min-width: $contents-min-width; height: 960px;
+		.btn-lg-signature { display: block; position: absolute; top: 40px; left: 50px; z-index: z("default"); text-indent: -9999px; @include sprite($sd-signature); }
+
+		.title-container { position: relative; height: 100%; margin-right: 360px; background: url('/assets/images/main_header.jpg') center center no-repeat; background-size: cover;
+			.title { display: block; position: absolute; top: 50%; margin-top: -96px; height: 192px; width: 100%; font-size: 70px; color: #fffffe; line-height: 1em; text-align: center;
+				small { font-size: 36px; }
+			}
+		}
+
+		.nav { float: left; position: absolute; top: 0; right: 0; bottom: 0; height: 100%; width: 360px; background-color: #191919;
+			.list-menus { display: block; position: absolute; bottom: 0; right: 0; left: 0; padding: 0 20px; /* border-top: 1px solid #050505; */
+				> li { border-top: 1px solid #3b3b3b; border-bottom: 1px solid #050505;
+					a { display: block; position: relative; padding: 30px 0 20px 120px; min-height: 70px; font-size: 16px; color: #bbb; line-height: 29px;
+						&:before { content: ''; display: block; position: absolute; top: 20px; left: 15px; height: 80px; width: 80px; background-color: 100%; }
+
+						p { font-size: 12px; color: #777; }
+
+						&.event {
+							&:before { @include sprite($sd-bg-nav01); }
+						}
+						&.gallery {
+							&:before { @include sprite($sd-bg-nav02); }
+						}
+						&.episode {
+							&:before { @include sprite($sd-bg-nav03); }
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.grid { overflow: hidden; margin: 0 -0.310559006211%;
+
+		.grid-item { display: block; float: left; margin: 0.310559006211%; width: 21.739130434783%;
+			.content { display: block; }
+
+			&.line-breaker { clear: both; }
+			&.category { color: #fff; text-align: center; background-position: center center; background-size: 100%;
+				.content {
+					.title { display: block; position: absolute; top: 50%; margin-top: -40px; width: 100%; font-size: 26px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
+						small { font-size: 18px; line-height: 1.3em; transition: font-size 0.3s; }
+
+						@include max-desktop() { font-size: 30px; transition: font-size 0.3s;
+							small { font-size: 22px; transition: font-size 0.3s; }
+						}
+					}
+				}
+			}
+
+			.content { 
+				.inner {  }
+
+				&.aspect-620 { @include aspect-ratio(620, 350); }
+				&.aspect-610 { @include aspect-ratio(610, 350); }
+				&.aspect-590 { @include aspect-ratio(590, 350); }
+				&.aspect-500 { @include aspect-ratio(500, 350); }
+				&.aspect-500-300 { @include aspect-ratio(500, 300); }
+				&.aspect-490 { @include aspect-ratio(490, 350); }
+				&.aspect-490-300 { @include aspect-ratio(490, 300); }
+				&.aspect-480 { @include aspect-ratio(480, 350); }
+				&.aspect-480-300 { @include aspect-ratio(480, 300); }
+				&.aspect-470 { @include aspect-ratio(470, 350); }
+				&.aspect-470-300 { @include aspect-ratio(470, 300); }
+				&.aspect-430 { @include aspect-ratio(430, 350); }
+				&.aspect-430-300 { @include aspect-ratio(430, 300); }
+				&.aspect-400 { @include aspect-ratio(400, 350); }
+				&.aspect-350 { @include aspect-ratio(350, 350); }
+				&.aspect-350-300 { @include aspect-ratio(350, 300); }
+				&.aspect-310 { @include aspect-ratio(310, 350); }
+				&.aspect-310-300 { @include aspect-ratio(310, 300); }
+				&.aspect-300 { @include aspect-ratio(300, 350); }
+				&.aspect-300-300 { @include aspect-ratio(300, 300); }
+				&.aspect-280 { @include aspect-ratio(280, 350); }
+				&.aspect-280-300 { @include aspect-ratio(280, 300); }
+				&.aspect-270 { @include aspect-ratio(270, 350); }
+				&.aspect-270-300 { @include aspect-ratio(270, 300); }
+
+
+			}
+
+		}
+
+	}
+}

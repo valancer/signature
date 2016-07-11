@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@import url(lgsmha.css);
+
+/**
+ * variable
+ */
+$font-base-stack: 'LGSmHa', sans-serif;
+$contents-max-width: 1800px;
+$contents-min-width: 1200px;
+
+body { min-width: $contents-min-width; background-color: #fff; }
+
+@import "base";
+@import "sprites";
+
+
+
+/**
+ * z-index
+**/
+$z-layers: (
+	'modal':            1000,
+	'modaless':          900,
+	'gnb':	             800,
+	'dropdown':          500,
+	'hover':             200,
+	'tooltip':           100,
+	'default':             1,
+	'bottomless-pit': -10000
+);
+
+@function z($layer) {
+	@if not map-has-key($z-layers, $layer) {
+		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+	}
+
+	@return map-get($z-layers, $layer);
+}
+
+
+/**
+ * mixin
+ */
+@mixin max-desktop {
+	@media only screen and (min-width: #{$contents-max-width}) {
+		@content;
+	}
+}
+
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+
+
+/**
+ * import
+ */
+@import "layout";
+@import "contents";
