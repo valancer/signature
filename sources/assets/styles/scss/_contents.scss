@@ -1,8 +1,13 @@
+.header { position: relative; overflow: hidden; margin: 0 auto; min-width: $contents-min-width; height: 960px;
+	.btn-lg-signature { display: block; position: absolute; top: 40px; left: 50px; z-index: z("default"); text-indent: -9999px; @include sprite($sd-signature); }
+}
+
 body.main { 
-	.header { position: relative; overflow: hidden; margin: 0 auto; min-width: $contents-min-width; height: 960px;
-		.btn-lg-signature { display: block; position: absolute; top: 40px; left: 50px; z-index: z("default"); text-indent: -9999px; @include sprite($sd-signature); }
+	.header { 
 
 		.title-container { position: relative; height: 100%; margin-right: 360px; background: url('/assets/images/main_header.jpg') center center no-repeat; background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/main_header.jpg', sizingMethod='scale');
+
 			.title { display: block; position: absolute; top: 50%; margin-top: -96px; height: 192px; width: 100%; font-size: 70px; color: #fffffe; line-height: 1em; text-align: center;
 				small { font-size: 36px; }
 			}
@@ -84,4 +89,48 @@ body.main {
 		}
 
 	}
+}
+
+
+body.view { 
+	.header { 
+		figure { height: 100%; width: 100%; }
+
+		.photo { position: relative; height: 100%; margin-right: 360px; background: url('/assets/images/view_header.jpg') center center no-repeat; background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/view_header.jpg', sizingMethod='scale');
+			
+			img { display: none; }
+		}
+
+		.detail { float: left; position: absolute; top: 0; right: 0; bottom: 0; height: 100%; width: 360px; text-align: center; background-color: #191919;
+			.inner { display: block; position: absolute; bottom: 0; right: 0; left: 0; padding: 0 20px; }
+
+			.index { display: block; margin: 0 auto; font-family: 'Abel', san-serif; font-size: 100px; color: #fff; line-height: 1.3em; }
+			.title { margin-top: 20px; font-size: 24px; color: #ffffff; line-height: 32px; }
+			.hash { display: block; margin-top: 28px; border-top: 1px solid #080808; border-bottom: 1px solid #474747;
+				dt { display: block; padding: 30px 0 15px 0; font-size: 22px; color: #ffffff; border-top: 1px solid #474747; line-height: 1.3em; }
+				dd { display: block; padding: 0 0 40px 0; font-size: 14px; color: #919191; line-heightt: 24px;
+					.like { display: inline-block; margin-top: 35px; font-size: 16px; color: #ffffff;
+						&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; @include sprite($sd-icon-like); }
+					}
+				}
+			}
+			.btns { padding-top: 40px; padding-bottom: 50px;
+				.btn-main { display: inline-block; text-indent: -9999px; @include sprite($sd-btn-main); }
+			}
+		}
+	}
+
+
+	.contents {
+		.message { text-align: center;
+			.title { font-size: 48px; color: #000; line-height: 1.3em;}
+			.hash { margin-top: 10px; font-size: 24px; color: #000; line-height: 1.3em;
+				em { display: block; margin-top: 5px; font-size: 18px; color: #d3230c; }
+			}
+		}
+
+		.tictalk { margin-top: 33px; border: 45px solid #484848; background-color: #fff; }
+	}
+
 }
