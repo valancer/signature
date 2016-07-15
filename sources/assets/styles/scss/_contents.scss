@@ -39,16 +39,16 @@ body.main {
 
 	.grid { overflow: hidden; margin: 0 -0.310559006211%;
 
-		.grid-item { display: block; float: left; margin: 0.310559006211%; width: 21.739130434783%;
+		.grid-item { display: block; position: relative; float: left; margin: 0.310559006211%; width: 21.739130434783%;
 			.content { display: block; }
 
 			&.line-breaker { clear: both; }
 			&.category { color: #fff; text-align: center; background-position: center center; background-size: 100%;
 				.content {
-					.title { display: block; position: absolute; top: 50%; margin-top: -40px; width: 100%; font-size: 26px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
+					.title { display: block; position: absolute; top: 50%; margin-top: -33px; width: 100%; font-size: 26px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
 						small { font-size: 18px; line-height: 1.3em; transition: font-size 0.3s; }
 
-						@include max-desktop() { font-size: 30px; transition: font-size 0.3s;
+						@include max-desktop() { margin-top: -40px; font-size: 30px; transition: font-size 0.3s;
 							small { font-size: 22px; transition: font-size 0.3s; }
 						}
 					}
@@ -57,7 +57,6 @@ body.main {
 
 			.content { 
 				.inner {  }
-
 				&.aspect-620 { @include aspect-ratio(620, 350); }
 				&.aspect-610 { @include aspect-ratio(610, 350); }
 				&.aspect-590 { @include aspect-ratio(590, 350); }
@@ -82,8 +81,33 @@ body.main {
 				&.aspect-280-300 { @include aspect-ratio(280, 300); }
 				&.aspect-270 { @include aspect-ratio(270, 350); }
 				&.aspect-270-300 { @include aspect-ratio(270, 300); }
+			}
 
+			.txt {
+				&:before { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: z("default"); background-color: #000;
+					opacity: 0; transition: opacity 0.5s ease-in-out;
+				}
 
+				p { display: block; position: absolute; top: 50%; right: 0; left: 0; z-index: z("default") + 1; margin-top: -35px; font-size: 20px; color: #fff; text-align: center; line-height: 33px;
+					opacity: 0; transition: opacity 0.3s ease-in-out;
+					small { font-size: 12px; }
+				}
+
+				@include max-desktop() {
+					p { font-size: 24px; line-height: 33px;
+						small { font-size: 16px; }
+					}
+				}
+			}
+
+			&:hover {
+				.txt { display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; 
+					&:before { content: ''; opacity: 0.8;
+						transition: opacity 0.5s ease-in-out;
+					}
+					
+					p { opacity: 1; transition: opacity 0.3s ease-in-out; }
+				}
 			}
 
 		}
@@ -96,7 +120,7 @@ body.view {
 	.header { 
 		figure { height: 100%; width: 100%; }
 
-		.photo { position: relative; height: 100%; margin-right: 360px; background: url('/assets/images/view_header.jpg') center center no-repeat; background-size: cover;
+		.photo { position: relative; height: 100%; margin-right: 360px; background-position: center center; background-repeat: no-repeat; background-size: cover;
 			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/view_header.jpg', sizingMethod='scale');
 			
 			img { display: none; }
@@ -134,3 +158,38 @@ body.view {
 	}
 
 }
+
+
+.popup-application { margin: 0 auto; padding: 70px 40px 100px 40px; min-width: 1120px; width: 1120px; color: #fff; background-color: #3a3a3a;
+	.title { font-size: 30px; font-weight: normal; line-height: 1em; text-align: center; }
+
+	.basic-info { margin-top: 50px; padding: 40px; font-size: 16px; color: #fff; text-align: center; background-color: #343332;
+		label { padding-right: 30px;
+			&.txt-phone { margin-left: 260px; }
+		}
+		input[type=text] { height: 36px; width: 128px; font-size: 16px; color: #000; line-height: 36px; vertical-align: middle; text-align: center; border: 0px; border-radius: 3px; background-color: #fff; }
+	}
+
+	.agreements {
+		.txt-agreement { display: block; margin-top: 50px; font-size: 22px; color: #fff; }
+		.list-agreement { margin-top: 20px; width: 100%; border-top: 1px solid #2c2b2a; border-right: 1px soli #2c2b2a; border-left: 1px solid #2c2b2a;
+			tr { border-bottom: 1px solid #2c2b2a; }
+			th { width: 258px; font-size: 16px; font-weight: normal; color: #fff; text-align: center; line-height: 45px; background-color: #373635; }
+			td { padding-left: 30px; font-size: 16px; color: #c4c4c4; background-color: #494949; }
+		}
+		.message { margin-top: 15px; font-size: 14px; color: #c4c4c4; }
+
+		.radios { margin-top: 25px; padding: 0 25px 0 0; text-align: right; background-color: #353535;
+			input[type=radio] { display: inline-block; vertical-align: middle;
+				+ label { display: inline-block; padding: 0 15px 0 5px; font-size: 14px; color: #fff; line-height: 50px; }
+			}
+		}
+	}
+
+	.btn-application { display: block; margin: 50px auto 0; height: 60px; width: 230px; font-size: 22px; color: #fff; text-align: center; line-height: 60px; background-color: #e64f3c; }
+	.mfp-close { display: block; position: absolute; top: 0; left: 50%; margin-left: 630px; text-indent: -9999px; @include sprite($sd-btn-close); }
+}
+
+
+
+

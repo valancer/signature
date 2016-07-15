@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url(lgsmha.css);
+@import url(magnific-popup.css);
 
 /**
  * variable
@@ -43,7 +44,7 @@ $z-layers: (
  * mixin
  */
 @mixin max-desktop {
-	@media only screen and (min-width: #{$contents-max-width}) {
+	@media only screen and (min-width: #{$contents-min-width + 1px}) {
 		@content;
 	}
 }

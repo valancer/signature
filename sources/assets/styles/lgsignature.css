@@ -1,4 +1,5 @@
 @import url(lgsmha.css);
+@import url(magnific-popup.css);
 /**
  * variable
  */
@@ -314,6 +315,7 @@ body.main .grid {
   margin: 0 -0.310559006211%; }
   body.main .grid .grid-item {
     display: block;
+    position: relative;
     float: left;
     margin: 0.310559006211%;
     width: 21.739130434783%; }
@@ -330,7 +332,7 @@ body.main .grid {
         display: block;
         position: absolute;
         top: 50%;
-        margin-top: -40px;
+        margin-top: -33px;
         width: 100%;
         font-size: 26px;
         color: #fff;
@@ -341,8 +343,9 @@ body.main .grid {
           font-size: 18px;
           line-height: 1.3em;
           transition: font-size 0.3s; }
-        @media only screen and (min-width: 1800px) {
+        @media only screen and (min-width: 1201px) {
           body.main .grid .grid-item.category .content .title {
+            margin-top: -40px;
             font-size: 30px;
             transition: font-size 0.3s; }
             body.main .grid .grid-item.category .content .title small {
@@ -660,6 +663,54 @@ body.main .grid {
         left: 0;
         right: 0;
         bottom: 0; }
+    body.main .grid .grid-item .txt:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #000;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; }
+    body.main .grid .grid-item .txt p {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      z-index: 2;
+      margin-top: -35px;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      line-height: 33px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out; }
+      body.main .grid .grid-item .txt p small {
+        font-size: 12px; }
+    @media only screen and (min-width: 1201px) {
+      body.main .grid .grid-item .txt p {
+        font-size: 24px;
+        line-height: 33px; }
+        body.main .grid .grid-item .txt p small {
+          font-size: 16px; } }
+    body.main .grid .grid-item:hover .txt {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+      body.main .grid .grid-item:hover .txt:before {
+        content: '';
+        opacity: 0.8;
+        transition: opacity 0.5s ease-in-out; }
+      body.main .grid .grid-item:hover .txt p {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out; }
 
 body.view .header figure {
   height: 100%;
@@ -669,7 +720,8 @@ body.view .header .photo {
   position: relative;
   height: 100%;
   margin-right: 360px;
-  background: url("/assets/images/view_header.jpg") center center no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/view_header.jpg', sizingMethod='scale'); }
   body.view .header .photo img {
@@ -733,7 +785,7 @@ body.view .header .detail {
           margin-right: 10px;
           vertical-align: middle;
           background-image: url(/assets/images/sprites.png);
-          background-position: -176px -86px;
+          background-position: -213px -86px;
           width: 22px;
           height: 19px; }
   body.view .header .detail .btns {
@@ -768,3 +820,103 @@ body.view .contents .tictalk {
   margin-top: 33px;
   border: 45px solid #484848;
   background-color: #fff; }
+
+.popup-application {
+  margin: 0 auto;
+  padding: 70px 40px 100px 40px;
+  min-width: 1120px;
+  width: 1120px;
+  color: #fff;
+  background-color: #3a3a3a; }
+  .popup-application .title {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1em;
+    text-align: center; }
+  .popup-application .basic-info {
+    margin-top: 50px;
+    padding: 40px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background-color: #343332; }
+    .popup-application .basic-info label {
+      padding-right: 30px; }
+      .popup-application .basic-info label.txt-phone {
+        margin-left: 260px; }
+    .popup-application .basic-info input[type=text] {
+      height: 36px;
+      width: 128px;
+      font-size: 16px;
+      color: #000;
+      line-height: 36px;
+      vertical-align: middle;
+      text-align: center;
+      border: 0px;
+      border-radius: 3px;
+      background-color: #fff; }
+  .popup-application .agreements .txt-agreement {
+    display: block;
+    margin-top: 50px;
+    font-size: 22px;
+    color: #fff; }
+  .popup-application .agreements .list-agreement {
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid #2c2b2a;
+    border-right: 1px soli #2c2b2a;
+    border-left: 1px solid #2c2b2a; }
+    .popup-application .agreements .list-agreement tr {
+      border-bottom: 1px solid #2c2b2a; }
+    .popup-application .agreements .list-agreement th {
+      width: 258px;
+      font-size: 16px;
+      font-weight: normal;
+      color: #fff;
+      text-align: center;
+      line-height: 45px;
+      background-color: #373635; }
+    .popup-application .agreements .list-agreement td {
+      padding-left: 30px;
+      font-size: 16px;
+      color: #c4c4c4;
+      background-color: #494949; }
+  .popup-application .agreements .message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #c4c4c4; }
+  .popup-application .agreements .radios {
+    margin-top: 25px;
+    padding: 0 25px 0 0;
+    text-align: right;
+    background-color: #353535; }
+    .popup-application .agreements .radios input[type=radio] {
+      display: inline-block;
+      vertical-align: middle; }
+      .popup-application .agreements .radios input[type=radio] + label {
+        display: inline-block;
+        padding: 0 15px 0 5px;
+        font-size: 14px;
+        color: #fff;
+        line-height: 50px; }
+  .popup-application .btn-application {
+    display: block;
+    margin: 50px auto 0;
+    height: 60px;
+    width: 230px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    background-color: #e64f3c; }
+  .popup-application .mfp-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 630px;
+    text-indent: -9999px;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -176px -86px;
+    width: 31px;
+    height: 31px; }
