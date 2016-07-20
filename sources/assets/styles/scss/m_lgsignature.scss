@@ -7,13 +7,13 @@
  * variable
  */
 $font-base-stack: 'LGSmHa', sans-serif;
-$contents-max-width: 1800px;
-$contents-min-width: 1200px;
+$contents-max-width: 768px;
+$contents-min-width: 320px;
 
 body { min-width: $contents-min-width; background-color: #fff; }
 
 @import "base";
-@import "sprites";
+@import "sprites_mobile";
 
 
 
@@ -72,4 +72,4 @@ $z-layers: (
 /**
  * import
  */
-@import "contents";
+@import "m_contents";

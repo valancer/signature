@@ -3,14 +3,3 @@
 
 
 
-/* FOOTER */
-.footer { margin: 0 auto; min-width: $contents-min-width; height: 100px; background-color: #111;
-	> .inner { padding: 0 100px; font-size: 11px; color: #fff; line-height: 100px; }
-}
-
-
-
-
-/* CONTENTS */
-article.contents { margin: 0 auto; padding: 100px; min-width: $contents-min-width - 200;
-}

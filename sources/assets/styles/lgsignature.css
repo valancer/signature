@@ -22,7 +22,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 body {
   position: relative;
   /*min-height: 800px;*/
-  min-width: 1160px;
+  min-width: 1200px;
   margin: 0 auto;
   font-size: 100%;
   line-height: 1.3em;
@@ -196,7 +196,6 @@ The `sprites` mixin generates identical output to the CSS template
 /**
  * import
  */
-/* contents */
 /* FOOTER */
 .footer {
   margin: 0 auto;
@@ -219,8 +218,8 @@ article.contents {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  min-width: 1200px;
-  height: 960px; }
+  max-width: 1800px;
+  min-width: 1200px; }
   .header .btn-lg-signature {
     display: block;
     position: absolute;
@@ -233,14 +232,29 @@ article.contents {
     width: 144px;
     height: 14px; }
 
-body.main .header .title-container {
+body.main .header figure {
+  display: block;
   position: relative;
-  height: 100%;
-  margin-right: 360px;
-  background: url("/assets/images/main_header.jpg") center center no-repeat;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/main_header.jpg', sizingMethod='scale'); }
-  body.main .header .title-container .title {
+  box-sizing: border-box;
+  padding-right: 360px;
+  width: 100%; }
+  body.main .header figure figcaption {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 360px;
+    background-color: #191919; }
+
+body.main .header .photo {
+  display: block;
+  position: relative;
+  width: 100%; }
+  body.main .header .photo img {
+    width: 100%; }
+  body.main .header .photo .title {
     display: block;
     position: absolute;
     top: 50%;
@@ -251,18 +265,11 @@ body.main .header .title-container {
     color: #fffffe;
     line-height: 1em;
     text-align: center; }
-    body.main .header .title-container .title small {
+    body.main .header .photo .title small {
       font-size: 36px; }
 
 body.main .header .nav {
-  float: left;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 360px;
-  background-color: #191919; }
+  height: 100%; }
   body.main .header .nav .list-menus {
     display: block;
     position: absolute;
@@ -713,30 +720,30 @@ body.main .grid {
         transition: opacity 0.3s ease-in-out; }
 
 body.view .header figure {
-  height: 100%;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding-right: 360px;
   width: 100%; }
+  body.view .header figure figcaption {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 360px;
+    background-color: #191919; }
 
 body.view .header .photo {
+  display: block;
   position: relative;
-  height: 100%;
-  margin-right: 360px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/view_header.jpg', sizingMethod='scale'); }
+  width: 100%; }
   body.view .header .photo img {
-    display: none; }
+    width: 100%; }
 
 body.view .header .detail {
-  float: left;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 360px;
-  text-align: center;
-  background-color: #191919; }
+  text-align: center; }
   body.view .header .detail .inner {
     display: block;
     position: absolute;
