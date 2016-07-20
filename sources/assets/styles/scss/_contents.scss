@@ -1,6 +1,8 @@
 /* FOOTER */
-.footer { clear: both; margin: 0 auto; min-width: $contents-min-width; height: 100px; background-color: #111;
-	> .inner { padding: 0 100px; font-size: 11px; color: #fff; line-height: 100px; }
+.footer { clear: both; margin: 0 auto; min-width: $contents-min-width; background-color: #111;
+	> .inner { padding: 27px 100px; font-size: 14px; color: #888; line-height: 24px;
+		small { display: block; margin-top: 5px; }
+	}
 }
 
 
@@ -63,9 +65,9 @@ body.main {
 					.title { display: block; position: absolute; top: 50%; margin-top: -33px; width: 100%; font-size: 26px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
 						small { font-size: 18px; line-height: 1.3em; transition: font-size 0.3s; }
 
-						@include max-desktop() { margin-top: -40px; font-size: 30px; transition: font-size 0.3s;
-							small { font-size: 22px; transition: font-size 0.3s; }
-						}
+						// @include max-desktop() { margin-top: -40px; font-size: 30px; transition: font-size 0.3s;
+						// 	small { font-size: 22px; transition: font-size 0.3s; }
+						// }
 					}
 				}
 			}
