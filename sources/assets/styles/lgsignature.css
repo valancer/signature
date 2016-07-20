@@ -198,6 +198,7 @@ The `sprites` mixin generates identical output to the CSS template
  */
 /* FOOTER */
 .footer {
+  clear: both;
   margin: 0 auto;
   min-width: 1200px;
   height: 100px;

@@ -1,3 +1,12 @@
+/* mobile check */
+var isAndroid = (navigator.userAgent.indexOf("Android") > -1);
+var isIOS = ((navigator.userAgent.indexOf("iPhone") > -1) || (navigator.userAgent.indexOf("iPad") > -1));
+
+if (isAndroid || isIOS)	{
+	location.href = './m_list.html';
+}
+
+
 // console 객체가 없을 경우
 if (!window.console) {
 	window.console = {

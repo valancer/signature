@@ -1,0 +1,172 @@
+@@include('./m_head.html')
+<body class="view">
+
+
+	<!-- 상단 영역 -->
+	<header class="header">
+
+		<div class="navigation-bar">
+			<a href="#" class="btn-back">뒤로</a>
+
+			<p class="title">
+				가전, 작품이 되다
+			</p>
+		</div>
+
+		<figure>
+			<div class="photo"><img src="/assets/images/mobile/view_header.jpg" alt=""></div>
+
+			<figcaption class="detail">
+				<div class="category">
+					<img src="/assets/images/photo02_thumb.png" alt="" class="thumb">
+					<h1 class="title">글라스의 미학 OLED TV</h1>
+					<span class="like">2,561</span>
+				</div>
+
+
+				<dl class="hash">
+					<dt>
+						<span class="index">02</span>
+						#촉촉한 새벽
+					</dt>
+					<dd>
+						촉촉한 새벽이 밝아온다 숲이, 강이, 새들이<br>숨을 쉰다 온갖 작은 근심들을 씻는다
+					</dd>
+				</dl>
+			</figcaption>
+		</figure>
+
+	</header>
+
+
+	<!-- 본문 영역 -->
+	<main>
+		<article class="contents">
+
+			<div class="tictalk">
+				<p class="message">
+					#LG시그니처 #LGSIGNATURE 해시태그를 입력하고 작품을 담아가세요!
+					<em>* SNS 로그인 후 자동으로 댓글창에 해시태그가 적용됩니다.</em>
+				</p>
+
+
+				<div class="talk">
+					contents
+				</div>
+			</div>
+
+			<p class="btns">
+				<a href="#" class="btn-top">위로</a>
+				<div class="clear"></div>
+			</p>
+		</article>
+
+	</main>
+
+
+	<!-- 응모팝업 -->
+	<aside id="popup-application" class="popup-application mfp-hide">
+		<h2 class="title">이벤트 참여를 위한 정보를 입력하고 약관에 동의해주세요.</h2>
+
+		<fieldset>
+			<legend>이벤트 참여</legend>
+
+			<fieldset class="basic-info">
+				<legend>기본 정보 입력 폼</legend>
+
+				<p>
+					<label for="" class="txt-name">이름</label>
+					<input type="text" id="" name="" style="width: 100px;">					
+				</p>
+
+				<p>
+					<label for="" class="txt-phone">연락처</label>
+					<input type="text" id="" name="">
+					-
+					<input type="text" id="" name="">
+					-
+					<input type="text" id="" name="">
+				</p>
+			</fieldset>
+
+
+			<fieldset class="agreements">
+				<legend>동의</legend>
+
+				<label for="" class="txt-agreement">[필수항목] 개인정보 수집 이용동의 (이벤트참여)</label>
+				<table class="list-agreement">
+					<caption>개인정보 수집 이용동의 (이벤트참여)</caption>
+					<tbody>
+						<tr>
+							<th>목적</th>
+							<td>이벤트 응모내역 확인 시 본인 확인, 경품배송</td>
+						</tr>
+						<tr>
+							<th>항목</th>
+							<td>이름, 휴대폰 번호</td>
+						</tr>
+						<tr>
+							<th>보유기간</th>
+							<td>이벤트 종료 후 폐기</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="message">※ 귀하께서는 본 동의를 거절하실 수 있습니다. 단, 거절하신 경우 이벤트 참여가 제한될 수 있습니다.</p>
+
+				<div class="radios">
+					<input type="radio" id="agreement01_01" name="agreement01">
+					<label for="agreement01_01" class="agreement-yes">동의함</label>
+					<input type="radio" id="agreement01_02" name="agreement01">
+					<label for="agreement01_02" class="agreement-no">동의안함</label>
+				</div>
+			</fieldset>
+
+
+			<fieldset class="agreements">
+				<legend>동의</legend>
+
+				<label for="" class="txt-agreement">[필수항목] 개인정보 취급위탁 동의</label>
+				<table class="list-agreement">
+					<caption>개인정보 취급위탁 동의</caption>
+					<tbody>
+						<tr>
+							<th>수탁자</th>
+							<td>HS 애드</td>
+						</tr>
+						<tr>
+							<th>목적</th>
+							<td>시스템관리, 이벤트와 관련된 업무(경품 제공 등)</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="message">* 경품 제공 등 이벤트 수행을 위해 개인정보 취급위탁에 동의하셔야 이벤트 참여가 가능합니다.</p>
+
+				<div class="radios">
+					<input type="radio" id="agreement02_01" name="agreement02">
+					<label for="agreement02_01" class="agreement-yes">동의함</label>
+
+					<input type="radio" id="agreement02_02" name="agreement02">
+					<label for="agreement02_02" class="agreement-no">동의안함</label>
+				</div>
+			</fieldset>
+
+			<input type="submit" class="btn-application" value="참여완료">
+		</fieldset>
+	</aside>
+	<script>
+	$(window.document).ready(function(){
+
+		$.magnificPopup.open({
+			items: {
+				src: '#popup-application'
+			}
+		}, 0);
+	});
+	</script>
+
+	
+	<!-- 하단 영역 -->
+	@@include('./m_footer.html')
+
+</body>
+</html>
