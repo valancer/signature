@@ -1,0 +1,56 @@
+<figure>
+	<div class="photo">
+			@@if( category == "01" ) {
+				<a href="#" target="_blank"><img src="/assets/images/@@photo" alt=""></a>
+			}
+			@@if( category == "02" ) {
+				<a href="#" target="_blank"><img src="/assets/images/@@photo" alt=""></a>
+			}
+			@@if( category == "03" ) {
+				<a href="#" target="_blank"><img src="/assets/images/@@photo" alt=""></a>
+			}
+			@@if( category == "04" ) {
+				<a href="#" target="_blank"><img src="/assets/images/@@photo" alt=""></a>
+			}
+			@@if( category == "05" ) {
+				<a href="#" target="_blank"><img src="/assets/images/@@photo" alt=""></a>
+			}
+	</div>
+
+	<figcaption class="detail">
+		<div class="category">
+			@@if( category == "01" ) {
+				<img src="/assets/images/mobile/category01_thumb.png" alt="" class="thumb">
+				<h1 class="title">찬란하고 찬란했던 존재의 기록</h1>
+			}
+			@@if( category == "02" ) {
+				<img src="/assets/images/mobile/category02_thumb.png" alt="" class="thumb">
+				<h1 class="title">현실보다 현실같던 순간의 기록</h1>
+			}
+			@@if( category == "03" ) {
+				<img src="/assets/images/mobile/category03_thumb.png" alt="" class="thumb">
+				<h1 class="title">눈부시고 눈부시던 기억의 기록</h1>
+			}
+			@@if( category == "04" ) {
+				<img src="/assets/images/mobile/category04_thumb.png" alt="" class="thumb">
+				<h1 class="title">고요하고 고요하던 시선의 기록</h1>
+			}
+			@@if( category == "05" ) {
+				<img src="/assets/images/mobile/category05_thumb.png" alt="" class="thumb">
+				<h1 class="title">투명하고 투명하던 공간의 기록</h1>
+			}
+			<span class="like">2,561</span>
+		</div>
+
+
+		<dl class="hash">
+			<dt>
+				<span class="index">@@index</span>
+				@@title
+			</dt>
+			<dd>
+				@@desc
+			</dd>
+		</dl>
+	</figcaption>
+</figure>

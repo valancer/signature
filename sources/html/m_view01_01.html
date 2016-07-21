@@ -1,0 +1,30 @@
+@@include('./m_head.html')
+<body class="view">
+
+
+	<!-- 상단 영역 -->
+	<header class="header">
+		@@include('./m_inc_navigation.html')
+
+		@@include('./m_inc_view_header.html', {"photo": "category01_01_view.jpg", "category": "01", "index": "01", "title": "Ultimate art", "desc": "기술을 넘어 예술의 경지로<br>올라선 시그니처, 존재만으로 작품이 되다."})
+	</header>
+
+
+	<!-- 본문 영역 -->
+	<main>
+		<article class="contents">
+
+			@@include('./m_inc_view_content.html')
+
+		</article>
+	</main>
+
+
+	@@include('./m_inc_application.html')
+
+	
+	<!-- 하단 영역 -->
+	@@include('./m_footer.html')
+
+</body>
+</html>

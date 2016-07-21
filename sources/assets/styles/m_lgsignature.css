@@ -497,8 +497,7 @@ body.view .header .detail {
       margin-right: 10px;
       height: 32px;
       width: 32px;
-      vertical-align: middle;
-      border-radius: 32px; }
+      vertical-align: middle; }
     body.view .header .detail .category .title {
       display: inline-block;
       font-size: 11px;
