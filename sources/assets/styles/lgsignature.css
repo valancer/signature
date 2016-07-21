@@ -736,6 +736,12 @@ body.view .header .photo {
   width: 100%; }
   body.view .header .photo img {
     width: 100%; }
+  body.view .header .photo .btn-external-link {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    text-indent: -9999px;
+    background-color: rgba(0, 0, 0, 0.3); }
 
 body.view .header .detail {
   text-align: center; }

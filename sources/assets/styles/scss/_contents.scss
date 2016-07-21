@@ -142,6 +142,8 @@ body.view {
 
 		.photo { display: block; position: relative; width: 100%;
 			img { width: 100%; }
+
+			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background-color: rgba(0, 0, 0, 0.3); }
 		}
 
 		.detail { text-align: center;
