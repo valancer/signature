@@ -1,0 +1,30 @@
+@@include('./m_head.html')
+<body class="view">
+
+
+	<!-- 상단 영역 -->
+	<header class="header">
+		@@include('./m_inc_navigation.html')
+
+		@@include('./m_inc_view_header.html', {"photo": "category02_05_view.jpg", "index": "08", "category": "02", "title": "Perfect  World", "desc": "스스로 빛을 내는 올레드 스크린으로<br>왜곡없이 빛나는 도시의 컬러를 경험하다"})
+	</header>
+
+
+	<!-- 본문 영역 -->
+	<main>
+		<article class="contents">
+
+			@@include('./m_inc_view_content.html')
+
+		</article>
+	</main>
+
+
+	@@include('./m_inc_application.html')
+
+	
+	<!-- 하단 영역 -->
+	@@include('./m_footer.html')
+
+</body>
+</html>

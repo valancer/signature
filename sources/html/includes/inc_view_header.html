@@ -1,7 +1,12 @@
 <a href="https://www.lge.co.kr/lgekor/lgsignature/lgsignatureMain.do" class="btn-lg-signature">LG SIGNATURE</a>
 
 <figure>
-	<div class="photo">
+	@@if( bg === true ) {
+		<div class="photo" style="background-image: url('/assets/images/@@bg-image');">
+	}
+	@@if( bg === false ) {
+		<div class="photo">
+	}
 		<img src="/assets/images/@@photo" alt="">
 
 			@@if( category == "01" ) {

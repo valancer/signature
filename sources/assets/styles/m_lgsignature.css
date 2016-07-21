@@ -347,14 +347,14 @@ body.main .grid {
     width: 48.360655737705%; }
     body.main .grid .grid-item .content {
       display: block; }
-      body.main .grid .grid-item .content.aspect-245 {
+      body.main .grid .grid-item .content.aspect-195 {
         position: relative; }
-        body.main .grid .grid-item .content.aspect-245:before {
+        body.main .grid .grid-item .content.aspect-195:before {
           display: block;
           content: "";
           width: 100%;
-          padding-top: 83.05085%; }
-        body.main .grid .grid-item .content.aspect-245 > .inner {
+          padding-top: 66.10169%; }
+        body.main .grid .grid-item .content.aspect-195 > .inner {
           position: absolute;
           top: 0;
           left: 0;
@@ -368,6 +368,58 @@ body.main .grid {
           width: 100%;
           padding-top: 69.49153%; }
         body.main .grid .grid-item .content.aspect-205 > .inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+      body.main .grid .grid-item .content.aspect-245 {
+        position: relative; }
+        body.main .grid .grid-item .content.aspect-245:before {
+          display: block;
+          content: "";
+          width: 100%;
+          padding-top: 83.05085%; }
+        body.main .grid .grid-item .content.aspect-245 > .inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+      body.main .grid .grid-item .content.aspect-295 {
+        position: relative; }
+        body.main .grid .grid-item .content.aspect-295:before {
+          display: block;
+          content: "";
+          width: 100%;
+          padding-top: 100%; }
+        body.main .grid .grid-item .content.aspect-295 > .inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+      body.main .grid .grid-item .content.aspect-325 {
+        position: relative; }
+        body.main .grid .grid-item .content.aspect-325:before {
+          display: block;
+          content: "";
+          width: 100%;
+          padding-top: 110.16949%; }
+        body.main .grid .grid-item .content.aspect-325 > .inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+      body.main .grid .grid-item .content.aspect-395 {
+        position: relative; }
+        body.main .grid .grid-item .content.aspect-395:before {
+          display: block;
+          content: "";
+          width: 100%;
+          padding-top: 133.89831%; }
+        body.main .grid .grid-item .content.aspect-395 > .inner {
           position: absolute;
           top: 0;
           left: 0;
@@ -426,7 +478,7 @@ body.main .grid {
           display: block;
           position: absolute;
           top: 50%;
-          margin-top: -33px;
+          margin-top: -30px;
           width: 100%;
           font-size: 15px;
           color: #fff;
@@ -434,7 +486,7 @@ body.main .grid {
           line-height: 1.3em;
           transition: font-size 0.3s; }
           body.main .grid .grid-item.category .content .title small {
-            font-size: 11px;
+            font-size: 12px;
             line-height: 1.3em;
             transition: font-size 0.3s; }
 
@@ -571,10 +623,10 @@ body.view .contents {
         display: block;
         font-size: 10px; }
 
-body.view .btns {
+.btns {
   padding-top: 35px; }
 
-body.view .btn-top {
+.btn-top {
   display: block;
   float: right;
   height: 34px;
@@ -587,16 +639,16 @@ body.view .btn-top {
   border: 1px solid #9d9d9d;
   background-color: #fff; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    body.view .btn-top {
+    .btn-top {
       background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
       background-size: 140px 123px; } }
-  body.view .btn-top:after {
+  .btn-top:after {
     content: '';
     display: block;
     clear: both; }
 
 .popup-application {
-  margin: 0 3.125%;
+  margin: 44px 3.125% 0;
   padding: 20px 15px 30px 15px;
   color: #fff;
   background-color: #3a3a3a; }
@@ -688,7 +740,7 @@ body.view .btn-top {
   .popup-application .mfp-close {
     display: block;
     position: absolute;
-    top: 3px;
+    top: 0;
     right: 0;
     text-indent: -9999px;
     background-image: url(/assets/images/mobile/sprites_mobile.png);

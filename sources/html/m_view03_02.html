@@ -1,0 +1,30 @@
+@@include('./m_head.html')
+<body class="view">
+
+
+	<!-- 상단 영역 -->
+	<header class="header">
+		@@include('./m_inc_navigation.html')
+
+		@@include('./m_inc_view_header.html', {"photo": "category03_02_view.jpg", "index": "10", "category": "03", "title": "Memories of Nights", "desc": "매직스페이스 글래스를 통해 바라본 차가운 밤<br>그리고 선명해지는 풍경의 기억"})
+	</header>
+
+
+	<!-- 본문 영역 -->
+	<main>
+		<article class="contents">
+
+			@@include('./m_inc_view_content.html')
+
+		</article>
+	</main>
+
+
+	@@include('./m_inc_application.html')
+
+	
+	<!-- 하단 영역 -->
+	@@include('./m_footer.html')
+
+</body>
+</html>

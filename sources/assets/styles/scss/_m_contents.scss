@@ -47,8 +47,12 @@ body.main {
 	.grid { overflow: hidden;
 		.grid-item { display: block; position: relative; float: left; margin: 0 0.819672131148% 1.311475409836%; width: 48.360655737705%;
 			.content { display: block;
-				&.aspect-245 { @include aspect-ratio(295, 245); }
+				&.aspect-195 { @include aspect-ratio(295, 195); }
 				&.aspect-205 { @include aspect-ratio(295, 205); }
+				&.aspect-245 { @include aspect-ratio(295, 245); }
+				&.aspect-295 { @include aspect-ratio(295, 295); }
+				&.aspect-325 { @include aspect-ratio(295, 325); }
+				&.aspect-395 { @include aspect-ratio(295, 395); }
 				&.aspect-425 { @include aspect-ratio(295, 425); }
 				&.aspect-475 { @include aspect-ratio(295, 475); }
 				
@@ -60,8 +64,8 @@ body.main {
 
 			&.category { color: #fff; text-align: center; background-position: center center; background-size: 100% 100%; background-repeat: no-repeat;
 				.content { @include aspect-ratio(295, 245);
-					.title { display: block; position: absolute; top: 50%; margin-top: -33px; width: 100%; font-size: 15px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
-						small { font-size: 11px; line-height: 1.3em; transition: font-size 0.3s; }
+					.title { display: block; position: absolute; top: 50%; margin-top: -30px; width: 100%; font-size: 15px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
+						small { font-size: 12px; line-height: 1.3em; transition: font-size 0.3s; }
 					}
 				}
 			}
@@ -121,14 +125,15 @@ body.view {
 
 	}
 
-	.btns { padding-top: 35px; }
-	.btn-top { display: block; float: right; height: 34px; width: 34px; text-indent: -9999px; @include retina-sprite($sm-btn-top-group); border: 1px solid #9d9d9d; background-color: #fff;
-		&:after { content: ''; display: block; clear: both; }
-	}
+}
+
+.btns { padding-top: 35px; }
+.btn-top { display: block; float: right; height: 34px; width: 34px; text-indent: -9999px; @include retina-sprite($sm-btn-top-group); border: 1px solid #9d9d9d; background-color: #fff;
+	&:after { content: ''; display: block; clear: both; }
 }
 
 
-.popup-application { margin: 0 3.125%; padding: 20px 15px 30px 15px; color: #fff; background-color: #3a3a3a;
+.popup-application { margin: 44px 3.125% 0; padding: 20px 15px 30px 15px; color: #fff; background-color: #3a3a3a;
 	.title { font-size: 12px; font-weight: normal; line-height: 1em; text-align: center; }
 
 	.basic-info { margin-top: 15px; padding: 13px; font-size: 11px; color: #fff; background-color: #343332;
@@ -156,5 +161,5 @@ body.view {
 	}
 
 	.btn-application { display: block; margin: 20px auto 0; height: 35px; width: 115px; font-size: 13px; color: #fff; text-align: center; line-height: 35px; background-color: #e64f3c; }
-	.mfp-close { display: block; position: absolute; top: 3px; right: 0; text-indent: -9999px; @include retina-sprite($sm-btn-close-group); }
+	.mfp-close { display: block; position: absolute; top: 0; right: 0; text-indent: -9999px; @include retina-sprite($sm-btn-close-group); }
 }

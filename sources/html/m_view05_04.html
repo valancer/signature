@@ -1,0 +1,30 @@
+@@include('./m_head.html')
+<body class="view">
+
+
+	<!-- 상단 영역 -->
+	<header class="header">
+		@@include('./m_inc_navigation.html')
+
+		@@include('./m_inc_view_header.html', {"photo": "category05_04_view.jpg", "index": "22", "category": "05", "title": "Falll in Fall", "desc": "물에서 태어나 물에서 완성되는<br>시그니처만의 맑은 공기를 만나다"})
+	</header>
+
+
+	<!-- 본문 영역 -->
+	<main>
+		<article class="contents">
+
+			@@include('./m_inc_view_content.html')
+
+		</article>
+	</main>
+
+
+	@@include('./m_inc_application.html')
+
+	
+	<!-- 하단 영역 -->
+	@@include('./m_footer.html')
+
+</body>
+</html>

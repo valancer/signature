@@ -1,0 +1,30 @@
+@@include('./m_head.html')
+<body class="view">
+
+
+	<!-- 상단 영역 -->
+	<header class="header">
+		@@include('./m_inc_navigation.html')
+
+		@@include('./m_inc_view_header.html', {"photo": "category05_05_view.jpg", "index": "23", "category": "05", "title": "Good Morning", "desc": "미세 필터로 한번 물로 씻어 또 한번 워터링 시스템,<br>상쾌한 숲속 호수의 느낌을 선사하다"})
+	</header>
+
+
+	<!-- 본문 영역 -->
+	<main>
+		<article class="contents">
+
+			@@include('./m_inc_view_content.html')
+
+		</article>
+	</main>
+
+
+	@@include('./m_inc_application.html')
+
+	
+	<!-- 하단 영역 -->
+	@@include('./m_footer.html')
+
+</body>
+</html>

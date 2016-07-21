@@ -62,12 +62,12 @@ body.main {
 			&.line-breaker { clear: both; }
 			&.category { color: #fff; text-align: center; background-position: center center; background-size: 100%;
 				.content {
-					.title { display: block; position: absolute; top: 50%; margin-top: -33px; width: 100%; font-size: 26px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
-						small { font-size: 18px; line-height: 1.3em; transition: font-size 0.3s; }
+					.title { display: block; position: absolute; top: 50%; margin-top: -33px; width: 100%; font-size: 22px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
+						small { font-size: 14px; line-height: 1.3em; transition: font-size 0.3s; }
 
-						// @include max-desktop() { margin-top: -40px; font-size: 30px; transition: font-size 0.3s;
-						// 	small { font-size: 22px; transition: font-size 0.3s; }
-						// }
+						@include max-desktop() { margin-top: -40px; font-size: 26px; transition: font-size 0.3s;
+							small { font-size: 18px; transition: font-size 0.3s; }
+						}
 					}
 				}
 			}
@@ -140,27 +140,41 @@ body.view {
 			figcaption { display: block; position: absolute; top: 0; right: 0; bottom: 0; height: 100%; width: 360px; background-color: #191919; }
 		}
 
-		.photo { display: block; position: relative; width: 100%;
-			img { width: 100%; }
+		.photo { display: block; position: relative; width: 100%; text-align: center; background-size: cover;
+			img { max-height: 100%; max-width: 100%; }
 
-			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background-color: rgba(0, 0, 0, 0.3); }
+			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; }
 		}
 
 		.detail { text-align: center;
 			.inner { display: block; position: absolute; bottom: 0; right: 0; left: 0; padding: 0 20px; }
 
-			.index { display: block; margin: 0 auto; font-family: 'Abel', san-serif; font-size: 100px; color: #fff; line-height: 1.3em; }
-			.title { margin-top: 20px; font-size: 24px; color: #ffffff; line-height: 32px; }
-			.hash { display: block; margin-top: 28px; border-top: 1px solid #080808; border-bottom: 1px solid #474747;
-				dt { display: block; padding: 30px 0 15px 0; font-size: 22px; color: #ffffff; border-top: 1px solid #474747; line-height: 1.3em; }
-				dd { display: block; padding: 0 0 40px 0; font-size: 14px; color: #919191; line-heightt: 24px;
-					.like { display: inline-block; margin-top: 35px; font-size: 16px; color: #ffffff;
+			.index { display: block; margin: 0 auto; font-family: 'Abel', san-serif; font-size: 70px; color: #fff; line-height: 1.3em; }
+			.title { margin-top: 14px; font-size: 17px; color: #ffffff; line-height: 22px; }
+			.hash { display: block; margin-top: 20px; border-top: 1px solid #080808; border-bottom: 1px solid #474747;
+				dt { display: block; padding: 21px 0 11px 0; font-size: 15px; color: #ffffff; border-top: 1px solid #474747; line-height: 1.3em; }
+				dd { display: block; padding: 0 0 28px 0; font-size: 10px; color: #919191; line-heightt: 17px;
+					.like { display: inline-block; margin-top: 25px; font-size: 11px; color: #ffffff;
 						&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; @include sprite($sd-icon-like); }
 					}
 				}
 			}
-			.btns { padding-top: 40px; padding-bottom: 50px;
+			.btns { padding-top: 28px; padding-bottom: 50px;
 				.btn-main { display: inline-block; text-indent: -9999px; @include sprite($sd-btn-main); }
+			}
+
+
+			@include max-desktop() {
+				.inner { }
+				.index { font-size: 100px; }
+				.title { margin-top: 20px; font-size: 24px; line-height: 32px; }
+				.hash { margin-top: 28px;
+					dt { padding: 30px 0 15px 0; font-size: 22px; }
+					dd { padding: 0 0 40px 0; font-size: 14px; line-heightt: 24px;
+						.like { margin-top: 35px; font-size: 16px; }
+					}
+				}
+				.btns { padding-top: 40px; padding-bottom: 50px; }
 			}
 		}
 	}

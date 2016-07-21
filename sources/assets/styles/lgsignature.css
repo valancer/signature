@@ -344,15 +344,23 @@ body.main .grid {
         top: 50%;
         margin-top: -33px;
         width: 100%;
-        font-size: 26px;
+        font-size: 22px;
         color: #fff;
         text-align: center;
         line-height: 1.3em;
         transition: font-size 0.3s; }
         body.main .grid .grid-item.category .content .title small {
-          font-size: 18px;
+          font-size: 14px;
           line-height: 1.3em;
           transition: font-size 0.3s; }
+        @media only screen and (min-width: 1201px) {
+          body.main .grid .grid-item.category .content .title {
+            margin-top: -40px;
+            font-size: 26px;
+            transition: font-size 0.3s; }
+            body.main .grid .grid-item.category .content .title small {
+              font-size: 18px;
+              transition: font-size 0.3s; } }
     body.main .grid .grid-item .content.aspect-620 {
       position: relative; }
       body.main .grid .grid-item .content.aspect-620:before {
@@ -733,15 +741,17 @@ body.view .header figure {
 body.view .header .photo {
   display: block;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  text-align: center;
+  background-size: cover; }
   body.view .header .photo img {
-    width: 100%; }
+    max-height: 100%;
+    max-width: 100%; }
   body.view .header .photo .btn-external-link {
     display: block;
     position: absolute;
     z-index: 1;
-    text-indent: -9999px;
-    background-color: rgba(0, 0, 0, 0.3); }
+    text-indent: -9999px; }
 
 body.view .header .detail {
   text-align: center; }
@@ -756,36 +766,36 @@ body.view .header .detail {
     display: block;
     margin: 0 auto;
     font-family: 'Abel', san-serif;
-    font-size: 100px;
+    font-size: 70px;
     color: #fff;
     line-height: 1.3em; }
   body.view .header .detail .title {
-    margin-top: 20px;
-    font-size: 24px;
+    margin-top: 14px;
+    font-size: 17px;
     color: #ffffff;
-    line-height: 32px; }
+    line-height: 22px; }
   body.view .header .detail .hash {
     display: block;
-    margin-top: 28px;
+    margin-top: 20px;
     border-top: 1px solid #080808;
     border-bottom: 1px solid #474747; }
     body.view .header .detail .hash dt {
       display: block;
-      padding: 30px 0 15px 0;
-      font-size: 22px;
+      padding: 21px 0 11px 0;
+      font-size: 15px;
       color: #ffffff;
       border-top: 1px solid #474747;
       line-height: 1.3em; }
     body.view .header .detail .hash dd {
       display: block;
-      padding: 0 0 40px 0;
-      font-size: 14px;
+      padding: 0 0 28px 0;
+      font-size: 10px;
       color: #919191;
-      line-heightt: 24px; }
+      line-heightt: 17px; }
       body.view .header .detail .hash dd .like {
         display: inline-block;
-        margin-top: 35px;
-        font-size: 16px;
+        margin-top: 25px;
+        font-size: 11px;
         color: #ffffff; }
         body.view .header .detail .hash dd .like:before {
           content: '';
@@ -797,7 +807,7 @@ body.view .header .detail {
           width: 22px;
           height: 19px; }
   body.view .header .detail .btns {
-    padding-top: 40px;
+    padding-top: 28px;
     padding-bottom: 50px; }
     body.view .header .detail .btns .btn-main {
       display: inline-block;
@@ -806,6 +816,28 @@ body.view .header .detail {
       background-position: 0px 0px;
       width: 170px;
       height: 40px; }
+  @media only screen and (min-width: 1201px) {
+    body.view .header .detail .index {
+      font-size: 100px; }
+    body.view .header .detail .title {
+      margin-top: 20px;
+      font-size: 24px;
+      line-height: 32px; }
+    body.view .header .detail .hash {
+      margin-top: 28px; }
+      body.view .header .detail .hash dt {
+        padding: 30px 0 15px 0;
+        font-size: 22px; }
+      body.view .header .detail .hash dd {
+        padding: 0 0 40px 0;
+        font-size: 14px;
+        line-heightt: 24px; }
+        body.view .header .detail .hash dd .like {
+          margin-top: 35px;
+          font-size: 16px; }
+    body.view .header .detail .btns {
+      padding-top: 40px;
+      padding-bottom: 50px; } }
 
 body.view .contents .message {
   text-align: center; }
