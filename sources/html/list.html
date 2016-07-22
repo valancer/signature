@@ -17,30 +17,42 @@
 				</p>
 			</div>
 			
+			<!-- 10.07.22 팝업 추가 -->
 			<figcaption>
 				<nav class="nav">
 					<ul class="list-menus">
 						<li>
 							<a href="#" class="event">
 								작품을 담는 이벤트
-								<p>설명이 들어갑니다.</p>
+								<p>자세히보기 &gt;</p>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="gallery">
+							<a href="#popup-intro" class="gallery">
 								LG 시그니처 사진전 소개
-								<p>설명이 들어갑니다.</p>
+								<p>자세히보기 &gt;</p>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="episode">
 								사진 촬영 에피소드
-								<p>설명이 들어갑니다.</p>
+								<p>자세히보기 &gt;</p>
 							</a>
 						</li>
 					</ul>
 				</nav>
 			</figcaption>
+			<script>
+			$(document).ready(function(e) {
+				$('.list-menus .gallery').magnificPopup({
+  					fixedContentPos: true,
+					mainClass: 'mfp-fade',
+					closeOnContentClick: false,
+					closeOnBgClick: true
+				});
+			});
+			</script>
+			<!--// 10.07.22 팝업 추가 -->
 		</figure>
 
 	</header>
@@ -414,6 +426,34 @@
 
 		</article>
 	</main>
+
+
+	<!-- 사진전 소개 -->
+	<aside id="popup-intro" class="popup intro mfp-hide">
+		<div class="content">
+			<h2>가전, 작품이 되다</h2>
+			<p>
+				‘ 완벽함이란,<br>
+				더 이상 더할 것이 없는 상태가 아니라<br>
+				더 이상 뺄 것이  없는 상태.’ 라는 말처럼<br>
+				LG 시그니처는 본질에 집중하고  간결함만 남긴<br>
+				이름 그대로 이 시대의 초 프리미엄 가전의 상징입니다.<br>
+				<br>
+				우리를 둘러싼  풍경도 마찬가지입니다.<br>
+				군더더기 없는 모습으로 함께 호흡하며<br>
+				완벽한 조화를 이루는 우리 주변의 풍경 속에<br>
+				LG 시그니처가 함께 했습니다.<br>
+				<br>
+				가전 사진으로는 국내최초 자연광 야외찰영으로 진행된<br>
+				풍경 예술 콜라보레이션 [LG 시그니처 사진전]<br>
+				<br>
+				어디서도 보지 못한, 누구도 해보지 못한<br>
+				그 아름다운 기록의 순간 속으로 여러분을 초대합니다.<br>
+			</p>
+		</div>
+
+		<a href="#" class="btn-submit">사진전 감상하기</a>
+	</aside>
 
 	
 	<!-- 하단 영역 -->

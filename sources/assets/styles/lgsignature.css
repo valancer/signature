@@ -960,3 +960,39 @@ body.view .contents .tictalk {
     background-position: -176px -86px;
     width: 31px;
     height: 31px; }
+
+.popup {
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 1100px;
+  width: 1200px; }
+  .popup .mfp-close {
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    margin-left: 420px;
+    text-indent: -9999px;
+    background-image: url(/assets/images/sprites.png);
+    background-position: -176px -86px;
+    width: 31px;
+    height: 31px; }
+  .popup.intro {
+    padding-top: 90px;
+    background: url("/assets/images/bg_popup01.jpg") center top no-repeat; }
+    .popup.intro .content {
+      margin: 0 auto;
+      height: 820px;
+      width: 820px;
+      background: url("/assets/images/popup01.png") center top no-repeat; }
+      .popup.intro .content h2, .popup.intro .content p {
+        display: none; }
+  .popup .btn-submit {
+    display: block;
+    margin: 50px auto 0;
+    width: 270px;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 70px;
+    text-align: center;
+    background-color: #e64f3c; }
