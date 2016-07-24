@@ -163,3 +163,53 @@ body.view {
 	.btn-application { display: block; margin: 20px auto 0; height: 35px; width: 115px; font-size: 13px; color: #fff; text-align: center; line-height: 35px; background-color: #e64f3c; }
 	.mfp-close { display: block; position: absolute; top: 0; right: 0; text-indent: -9999px; @include retina-sprite($sm-btn-close-group); }
 }
+
+
+
+// 컨텐츠 팝업
+.mfp-wrap { overflow-x: auto !important; }
+.popup { box-sizing: border-box; margin: 0 auto; width: 300px;
+	.mfp-close { display: block; position: absolute; top: 0px; right: 0px; text-indent: -9999px; @include retina-sprite($sm-btn-close-group); }
+
+	// 이벤트 소개
+	&.event {
+		.mfp-close { top: 10px; margin-left: 610px; }
+
+		.content { position: relative; margin: 0 auto; height: 608px; width: 300px; background: url('/assets/images/mobile/popup02.png') center top no-repeat; background-size: 100%;
+			* { display: none; }
+			.btn-submit { display: block; position: absolute; bottom: 30px; left: 50%; margin-left: -77px; width: 155px; }
+		}
+
+		.guide { overflow: hidden; padding: 20px 15px; background-color: #1e1e1e;
+			.title { margin-bottom: 15px; font-size: 12px; font-weight: normal; color: #c9c9c9; line-height: 1.3em; }
+			.list-guide { width: 100%;
+				> li { position: relative; padding: 3px 0 0 7px; font-size: 10px; color: #888; line-height: 14px;
+					&:before { content: '-'; display: block; position: absolute; top: 0; left: 0; }
+				}
+			}
+		}
+	}
+
+
+	// 사진전 소개
+	&.intro { padding-top: 25px; height: 550px; width: 300px; background: url('/assets/images/mobile/bg_popup01.jpg') center top no-repeat; background-size: 100%;
+		.content { margin: 0 auto; height: 425px; width: 250px; background: url('/assets/images/mobile/popup01.png') center top no-repeat; background-size: 100%;
+			h2, p { display: none; }
+		}
+	}
+
+	// 에피소드
+	&.episode {
+		.content {
+			* { display: none; }
+			.photographer { display: block; height: 510px; width: 300px; background: url('/assets/images/mobile/popup03.jpg') center top no-repeat; background-size: 100%;; }
+			.episode-content { display: block; position: relative; height: 1169px; width: 300px; background: url('/assets/images/mobile/popup04.jpg') center top no-repeat; background-size: 100%;
+				.btn-submit { display: block; position: absolute; bottom: 40px; left: 50%; margin: 0 0 0 -67px; }
+			}
+		}
+	}
+
+	.btn-submit { display: block; margin: 25px auto 0; width: 135px; font-size: 12px; color: #ffffff; line-height: 35px; text-align: center; background-color: #e64f3c; }
+}
+
+
