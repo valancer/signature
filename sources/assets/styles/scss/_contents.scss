@@ -225,12 +225,52 @@ body.view {
 }
 
 
+
+// 컨텐츠 팝업
+.mfp-wrap { overflow-x: auto !important; }
 .popup { box-sizing: border-box; margin: 0 auto; height: 1100px; width: 1200px;
 	.mfp-close { display: block; position: absolute; top: 90px; left: 50%; margin-left: 420px; text-indent: -9999px; @include sprite($sd-btn-close); }
 
+	// 이벤트 소개
+	&.event {
+		.mfp-close { top: 10px; margin-left: 610px; }
+
+		.content { position: relative; margin: 0 auto; height: 1007px; width: 1200px; background: url('/assets/images/popup02.png') center top no-repeat;
+			* { display: none; }
+			.btn-submit { display: block; position: absolute; bottom: 70px; left: 50%; margin-left: -135px; width: 270px; }
+		}
+
+		.guide { overflow: hidden; padding: 35px 50px; background-color: #1e1e1e;
+			.title { margin-bottom: 30px; font-size: 24px; font-weight: normal; color: #c9c9c9; line-height: 1.3em; }
+			.list-guide { float: left; width: 500px; 
+				> li { position: relative; padding: 0 0 0 10px; font-size: 14px; color: #888; line-height: 25px;
+					&:before { content: '-'; display: block; position: absolute; top: 0; left: 0; }
+				}
+
+				+ .list-guide { margin-left: 40px; width: 520px; }
+			}
+		}
+	}
+
+
+	// 사진전 소개
 	&.intro { padding-top: 90px; background: url('/assets/images/bg_popup01.jpg') center top no-repeat;
 		.content { margin: 0 auto; height: 820px; width: 820px; background: url('/assets/images/popup01.png') center top no-repeat;
 			h2, p { display: none; }
+		}
+	}
+
+	// 에피소드
+	&.episode {
+		.mfp-close { top: 10px; margin-left: 610px; }
+
+		.content {
+			* { display: none; }
+			.photographer { display: block; height: 1020px; width: 1200px; background: url('/assets/images/popup03.jpg') center top no-repeat; }
+			.episode-content { display: block; padding: 60px 60px 85px 60px; background-color: #3a3a3a;
+				.list-episode { display: block; height: 1720px; width: 1080px; background: url('/assets/images/popup04.png') center top no-repeat; }
+			}
+			.btn-submit { display: block; }
 		}
 	}
 

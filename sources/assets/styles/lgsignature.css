@@ -961,6 +961,9 @@ body.view .contents .tictalk {
     width: 31px;
     height: 31px; }
 
+.mfp-wrap {
+  overflow-x: auto !important; }
+
 .popup {
   box-sizing: border-box;
   margin: 0 auto;
@@ -977,6 +980,52 @@ body.view .contents .tictalk {
     background-position: -176px -86px;
     width: 31px;
     height: 31px; }
+  .popup.event .mfp-close {
+    top: 10px;
+    margin-left: 610px; }
+  .popup.event .content {
+    position: relative;
+    margin: 0 auto;
+    height: 1007px;
+    width: 1200px;
+    background: url("/assets/images/popup02.png") center top no-repeat; }
+    .popup.event .content * {
+      display: none; }
+    .popup.event .content .btn-submit {
+      display: block;
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      margin-left: -135px;
+      width: 270px; }
+  .popup.event .guide {
+    overflow: hidden;
+    padding: 35px 50px;
+    background-color: #1e1e1e; }
+    .popup.event .guide .title {
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: normal;
+      color: #c9c9c9;
+      line-height: 1.3em; }
+    .popup.event .guide .list-guide {
+      float: left;
+      width: 500px; }
+      .popup.event .guide .list-guide > li {
+        position: relative;
+        padding: 0 0 0 10px;
+        font-size: 14px;
+        color: #888;
+        line-height: 25px; }
+        .popup.event .guide .list-guide > li:before {
+          content: '-';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0; }
+      .popup.event .guide .list-guide + .list-guide {
+        margin-left: 40px;
+        width: 520px; }
   .popup.intro {
     padding-top: 90px;
     background: url("/assets/images/bg_popup01.jpg") center top no-repeat; }
@@ -987,6 +1036,27 @@ body.view .contents .tictalk {
       background: url("/assets/images/popup01.png") center top no-repeat; }
       .popup.intro .content h2, .popup.intro .content p {
         display: none; }
+  .popup.episode .mfp-close {
+    top: 10px;
+    margin-left: 610px; }
+  .popup.episode .content * {
+    display: none; }
+  .popup.episode .content .photographer {
+    display: block;
+    height: 1020px;
+    width: 1200px;
+    background: url("/assets/images/popup03.jpg") center top no-repeat; }
+  .popup.episode .content .episode-content {
+    display: block;
+    padding: 60px 60px 85px 60px;
+    background-color: #3a3a3a; }
+    .popup.episode .content .episode-content .list-episode {
+      display: block;
+      height: 1720px;
+      width: 1080px;
+      background: url("/assets/images/popup04.png") center top no-repeat; }
+  .popup.episode .content .btn-submit {
+    display: block; }
   .popup .btn-submit {
     display: block;
     margin: 50px auto 0;
