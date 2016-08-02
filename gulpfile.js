@@ -249,4 +249,7 @@ gulp.task('build:mobile', ['clean:build'], function() {
 gulp.task('release', ['clean:release'], function() {
 	gulp.run(['sass-release', 'scripts-build', 'html-build', 'copy:assets', 'csscomb', 'copy:release']);
 });
+gulp.task('release-after', [], function() {
+	gulp.run(['csscomb', 'copy:release']);
+});
 

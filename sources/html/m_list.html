@@ -17,18 +17,33 @@
 				</p>
 			</div>
 			
-			<!-- 07.22 팝업 추가 -->
 			<figcaption>
 				<nav class="nav">
 					<ul class="list-menus">
-						<li style="width: 34.833333333333%;">
-							<a href="#popup-event" class="event">작품을 담는<br>이벤트</a>
+						<li class="top">
+							국내 최초로 진행된 풍경 예술 콜라보레이션<br>
+							<small>초프리미엄 가전 LG 시그니처가 일상에서 벗어나<br>자연에 녹아들어갔습니다.<br>여러분들께 어디서도 보지 못한<br>아름다운 기록의 순간을 선사해 드립니다.</small>
 						</li>
-						<li style="width: 35.333333333333%;">
-							<a href="#popup-intro" class="gallery">LG 시그니처<br>사진전 소개</a>
+						<li>
+							<a href="#popup-intro" class="gallery">
+								LG 시그니처 사진전 소개
+								<p>자세히보기 &gt;</p>
+							</a>
 						</li>
-						<li style="width: 29.833333333333%;">
-							<a href="#popup-episode" class="episode">사진 촬영<br>에피소드</a>
+						<li>
+							<a href="#popup-episode" class="episode">
+								사진 촬영 에피소드
+								<p>자세히보기 &gt;</p>
+							</a>
+						</li>
+						<li class="last">
+							<a href="#popup-event" class="event">
+								<div class="aspect">
+									<div class="inner">
+										
+									</div>	
+								</div>
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -58,7 +73,6 @@
 				});
 			});
 			</script>
-			<!--// 07.22 팝업 추가 -->
 		</figure>
 
 	</header>
@@ -75,7 +89,9 @@
 				<span class="grid-item category" style="background-image: url(/assets/images/mobile/bg_category01.jpg);">
 					<div class="content">
 						<div class="inner">
-							<strong class="title">찬란하고 찬란했던<br>존재의 기록<br><small>시그니처 전제품</small></strong>
+							<!-- 08.02 수정 -->
+							<strong class="title">가전, 작품이 되다</strong>
+							<!--// 08.02 수정 -->
 						</div>
 					</div>
 				</span>
@@ -108,7 +124,9 @@
 				<span class="grid-item category" style="background-image: url(/assets/images/mobile/bg_category02.jpg);">
 					<div class="content">
 						<div class="inner">
-							<strong class="title">현실보다 현실같던<br>순간의 기록<br><small>올레드 TV</small></strong>
+							<!-- 08.02 수정 -->
+							<strong class="title">TV, 작품이 되다</strong>
+							<!--// 08.02 수정 -->
 						</div>
 					</div>
 				</span>
@@ -155,7 +173,9 @@
 				<span class="grid-item category" style="background-image: url(/assets/images/mobile/bg_category03.jpg);">
 					<div class="content">
 						<div class="inner">
-							<strong class="title">눈부시고 눈부시던<br>기억의 기록<br><small>냉장고</small></strong>
+							<!-- 08.02 수정 -->
+							<strong class="title">냉장고, 작품이 되다</strong>
+							<!--// 08.02 수정 -->
 						</div>
 					</div>
 				</span>
@@ -202,7 +222,9 @@
 				<span class="grid-item category" style="background-image: url(/assets/images/mobile/bg_category04.jpg);">
 					<div class="content">
 						<div class="inner">
-							<strong class="title">고요하고 고요하던<br>시선의 기록<br><small>세탁기</small></strong>
+							<!-- 08.02 수정 -->
+							<strong class="title">세탁기, 작품이 되다</strong>
+							<!--// 08.02 수정 -->
 						</div>
 					</div>
 				</span>
@@ -249,7 +271,9 @@
 				<span class="grid-item category" style="background-image: url(/assets/images/mobile/bg_category05.jpg);">
 					<div class="content">
 						<div class="inner">
-							<strong class="title">투명하고 투명하던<br>공간의 기록<br><small>공기청정기</small></strong>
+							<!-- 08.02 수정 -->
+							<strong class="title">공기청정기, 작품이 되다</strong>
+							<!--// 08.02 수정 -->
 						</div>
 					</div>
 				</span>
@@ -289,6 +313,15 @@
 					</div>
 				</a>
 			</div>
+			<script>
+			$(document).ready(function(e) {
+				var $container = $(".grid");
+
+				$container.imagesLoaded(function () {
+					$container.masonry();
+				});
+			});
+			</script>
 
 
 			<p class="btns">
@@ -301,7 +334,6 @@
 	</main>
 
 
-	<!-- 07.22 팝업 추가 -->
 	<!-- 이벤트 소개 -->
 	<aside id="popup-event" class="popup event mfp-hide">
 		<div class="content">
@@ -448,8 +480,16 @@
 				<a href="#" class="btn-submit">사진전 감상하기</a>
 			</div>
 		</div>
+		<script>
+		$(document).ready(function(e) {
+			$(".popup .btn-submit").on('click', function(e) {
+				e.preventDefault();
+
+				$.magnificPopup.close();
+			});
+		});
+		</script>
 	</aside>
-	<!--// 07.22 팝업 추가 -->
 
 
 

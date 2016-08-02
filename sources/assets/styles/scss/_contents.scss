@@ -7,7 +7,7 @@
 
 
 /* CONTENTS */
-article.contents { margin: 0 auto; padding: 100px; min-width: $contents-min-width - 200;
+article.contents { margin: 0 auto; padding: 100px; min-width: $contents-min-width - 200; max-width: $contents-max-width - 200;
 }
 
 
@@ -33,19 +33,39 @@ body.main {
 		.nav { height: 100%;
 			.list-menus { display: block; position: absolute; bottom: 0; right: 0; left: 0; padding: 0 20px; /* border-top: 1px solid #050505; */
 				> li { border-top: 1px solid #3b3b3b; border-bottom: 1px solid #050505;
-					a { display: block; position: relative; padding: 30px 0 20px 120px; min-height: 70px; font-size: 16px; color: #bbb; line-height: 29px;
-						&:before { content: ''; display: block; position: absolute; top: 20px; left: 15px; height: 80px; width: 80px; background-color: 100%; }
+					&.top { border-top: 0px; padding: 0 0 10px 10px; font-size: 16px; line-height: 24px;
+						color: #fff;
+						small { font-size: 12px; line-height: 18px; }
+					}
+					
+					&.last { border-bottom: 0px; }
+					&.none { border: 0px; }
+
+					a { display: block; position: relative; padding: 20px 0 10px 120px; min-height: 70px; font-size: 16px; color: #bbb; line-height: 29px;
+						&:before { content: ''; display: block; position: absolute; top: 10px; left: 15px; height: 80px; width: 80px; background-color: 100%; }
 
 						p { font-size: 12px; color: #777; }
 
-						&.event {
-							&:before { @include sprite($sd-bg-nav01); }
+						&.event { padding: 0 0 15px 15px; height: 200px; text-align: left; text-indent: -9999px; 
+							&:before { content: ''; position: static; @include sprite($sd-event-banner); }
 						}
 						&.gallery {
 							&:before { @include sprite($sd-bg-nav02); }
 						}
 						&.episode {
 							&:before { @include sprite($sd-bg-nav03); }
+						}
+					}
+				}
+
+				@include max-desktop() {
+					> li { border-top: 1px solid #3b3b3b; border-bottom: 1px solid #050505;
+						&.top { border-top: 0px; padding: 0 0 23px 15px; font-size: 18px; line-height: 28px; letter-spacing: -0.05em;
+							small { font-size: 14px; line-height: 25px; }
+						}
+
+						a { padding: 30px 0 20px 120px;
+							&:before { top: 20px; }
 						}
 					}
 				}
@@ -62,10 +82,10 @@ body.main {
 			&.line-breaker { clear: both; }
 			&.category { color: #fff; text-align: center; background-position: center center; background-size: 100%;
 				.content {
-					.title { display: block; position: absolute; top: 50%; margin-top: -33px; width: 100%; font-size: 22px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
+					.title { display: block; position: absolute; top: 50%; margin-top: -14px; width: 100%; font-size: 22px; color: #fff; text-align: center; line-height: 1.3em; transition: font-size 0.3s;
 						small { font-size: 14px; line-height: 1.3em; transition: font-size 0.3s; }
 
-						@include max-desktop() { margin-top: -40px; font-size: 26px; transition: font-size 0.3s;
+						@include max-desktop() { margin-top: -17px; font-size: 26px; transition: font-size 0.3s;
 							small { font-size: 18px; transition: font-size 0.3s; }
 						}
 					}
@@ -152,9 +172,9 @@ body.view {
 			.index { display: block; margin: 0 auto; font-family: 'Abel', san-serif; font-size: 70px; color: #fff; line-height: 1.3em; }
 			.title { margin-top: 14px; font-size: 17px; color: #ffffff; line-height: 22px; }
 			.hash { display: block; margin-top: 20px; border-top: 1px solid #080808; border-bottom: 1px solid #474747;
-				dt { display: block; padding: 21px 0 11px 0; font-size: 15px; color: #ffffff; border-top: 1px solid #474747; line-height: 1.3em; }
-				dd { display: block; padding: 0 0 28px 0; font-size: 10px; color: #919191; line-heightt: 17px;
-					.like { display: inline-block; margin-top: 25px; font-size: 11px; color: #ffffff;
+				dt { display: none; padding: 21px 0 11px 0; font-size: 15px; color: #ffffff; border-top: 1px solid #474747; line-height: 1.3em; }
+				dd { display: block; padding: 21px 30px 28px 30px; font-size: 10px; color: #919191; line-heightt: 17px; text-align: left; word-breka: keep-all;
+					.like { display: block; margin: 25px auto 0; font-size: 11px; color: #ffffff; text-align: center;;
 						&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; @include sprite($sd-icon-like); }
 					}
 				}
@@ -170,7 +190,7 @@ body.view {
 				.title { margin-top: 20px; font-size: 24px; line-height: 32px; }
 				.hash { margin-top: 28px;
 					dt { padding: 30px 0 15px 0; font-size: 22px; }
-					dd { padding: 0 0 40px 0; font-size: 14px; line-heightt: 24px;
+					dd { padding: 30px 30px 40px 30px; font-size: 14px; line-heightt: 24px;
 						.like { margin-top: 35px; font-size: 16px; }
 					}
 				}
@@ -180,7 +200,7 @@ body.view {
 	}
 
 
-	.contents {
+	.contents { width: 1200px;
 		.message { text-align: center;
 			.title { font-size: 48px; color: #000; line-height: 1.3em;}
 			.hash { margin-top: 10px; font-size: 24px; color: #000; line-height: 1.3em;
@@ -188,7 +208,7 @@ body.view {
 			}
 		}
 
-		.tictalk { margin-top: 33px; border: 45px solid #484848; background-color: #fff; }
+		.tictalk { margin-top: 33px; padding: 35px 50px; border: 45px solid #484848; background-color: #fff; }
 	}
 
 }

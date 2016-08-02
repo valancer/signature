@@ -215,7 +215,8 @@ The `sprites` mixin generates identical output to the CSS template
 article.contents {
   margin: 0 auto;
   padding: 100px;
-  min-width: 1000px; }
+  min-width: 1000px;
+  max-width: 1600px; }
 
 .header {
   position: relative;
@@ -231,7 +232,7 @@ article.contents {
     z-index: 1;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: 0px -132px;
+    background-position: -86px -252px;
     width: 144px;
     height: 14px; }
 
@@ -284,10 +285,23 @@ body.main .header .nav {
     body.main .header .nav .list-menus > li {
       border-top: 1px solid #3b3b3b;
       border-bottom: 1px solid #050505; }
+      body.main .header .nav .list-menus > li.top {
+        border-top: 0px;
+        padding: 0 0 10px 10px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff; }
+        body.main .header .nav .list-menus > li.top small {
+          font-size: 12px;
+          line-height: 18px; }
+      body.main .header .nav .list-menus > li.last {
+        border-bottom: 0px; }
+      body.main .header .nav .list-menus > li.none {
+        border: 0px; }
       body.main .header .nav .list-menus > li a {
         display: block;
         position: relative;
-        padding: 30px 0 20px 120px;
+        padding: 20px 0 10px 120px;
         min-height: 70px;
         font-size: 16px;
         color: #bbb;
@@ -296,7 +310,7 @@ body.main .header .nav {
           content: '';
           display: block;
           position: absolute;
-          top: 20px;
+          top: 10px;
           left: 15px;
           height: 80px;
           width: 80px;
@@ -304,21 +318,45 @@ body.main .header .nav {
         body.main .header .nav .list-menus > li a p {
           font-size: 12px;
           color: #777; }
-        body.main .header .nav .list-menus > li a.event:before {
-          background-image: url(/assets/images/sprites.png);
-          background-position: 0px -46px;
-          width: 80px;
-          height: 80px; }
+        body.main .header .nav .list-menus > li a.event {
+          padding: 0 0 15px 15px;
+          height: 200px;
+          text-align: left;
+          text-indent: -9999px; }
+          body.main .header .nav .list-menus > li a.event:before {
+            content: '';
+            position: static;
+            background-image: url(/assets/images/sprites.png);
+            background-position: 0px 0px;
+            width: 290px;
+            height: 200px; }
         body.main .header .nav .list-menus > li a.gallery:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -86px -46px;
+          background-position: -296px -86px;
           width: 80px;
           height: 80px; }
         body.main .header .nav .list-menus > li a.episode:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -176px 0px;
+          background-position: 0px -252px;
           width: 80px;
           height: 80px; }
+    @media only screen and (min-width: 1201px) {
+      body.main .header .nav .list-menus > li {
+        border-top: 1px solid #3b3b3b;
+        border-bottom: 1px solid #050505; }
+        body.main .header .nav .list-menus > li.top {
+          border-top: 0px;
+          padding: 0 0 23px 15px;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: -0.05em; }
+          body.main .header .nav .list-menus > li.top small {
+            font-size: 14px;
+            line-height: 25px; }
+        body.main .header .nav .list-menus > li a {
+          padding: 30px 0 20px 120px; }
+          body.main .header .nav .list-menus > li a:before {
+            top: 20px; } }
 
 body.main .grid {
   overflow: hidden;
@@ -342,7 +380,7 @@ body.main .grid {
         display: block;
         position: absolute;
         top: 50%;
-        margin-top: -33px;
+        margin-top: -14px;
         width: 100%;
         font-size: 22px;
         color: #fff;
@@ -355,7 +393,7 @@ body.main .grid {
           transition: font-size 0.3s; }
         @media only screen and (min-width: 1201px) {
           body.main .grid .grid-item.category .content .title {
-            margin-top: -40px;
+            margin-top: -17px;
             font-size: 26px;
             transition: font-size 0.3s; }
             body.main .grid .grid-item.category .content .title small {
@@ -780,7 +818,7 @@ body.view .header .detail {
     border-top: 1px solid #080808;
     border-bottom: 1px solid #474747; }
     body.view .header .detail .hash dt {
-      display: block;
+      display: none;
       padding: 21px 0 11px 0;
       font-size: 15px;
       color: #ffffff;
@@ -788,22 +826,25 @@ body.view .header .detail {
       line-height: 1.3em; }
     body.view .header .detail .hash dd {
       display: block;
-      padding: 0 0 28px 0;
+      padding: 21px 30px 28px 30px;
       font-size: 10px;
       color: #919191;
-      line-heightt: 17px; }
+      line-heightt: 17px;
+      text-align: left;
+      word-breka: keep-all; }
       body.view .header .detail .hash dd .like {
-        display: inline-block;
-        margin-top: 25px;
+        display: block;
+        margin: 25px auto 0;
         font-size: 11px;
-        color: #ffffff; }
+        color: #ffffff;
+        text-align: center; }
         body.view .header .detail .hash dd .like:before {
           content: '';
           display: inline-block;
           margin-right: 10px;
           vertical-align: middle;
           background-image: url(/assets/images/sprites.png);
-          background-position: -213px -86px;
+          background-position: -333px -172px;
           width: 22px;
           height: 19px; }
   body.view .header .detail .btns {
@@ -813,7 +854,7 @@ body.view .header .detail {
       display: inline-block;
       text-indent: -9999px;
       background-image: url(/assets/images/sprites.png);
-      background-position: 0px 0px;
+      background-position: 0px -206px;
       width: 170px;
       height: 40px; }
   @media only screen and (min-width: 1201px) {
@@ -829,7 +870,7 @@ body.view .header .detail {
         padding: 30px 0 15px 0;
         font-size: 22px; }
       body.view .header .detail .hash dd {
-        padding: 0 0 40px 0;
+        padding: 30px 30px 40px 30px;
         font-size: 14px;
         line-heightt: 24px; }
         body.view .header .detail .hash dd .like {
@@ -839,27 +880,29 @@ body.view .header .detail {
       padding-top: 40px;
       padding-bottom: 50px; } }
 
-body.view .contents .message {
-  text-align: center; }
-  body.view .contents .message .title {
-    font-size: 48px;
-    color: #000;
-    line-height: 1.3em; }
-  body.view .contents .message .hash {
-    margin-top: 10px;
-    font-size: 24px;
-    color: #000;
-    line-height: 1.3em; }
-    body.view .contents .message .hash em {
-      display: block;
-      margin-top: 5px;
-      font-size: 18px;
-      color: #d3230c; }
-
-body.view .contents .tictalk {
-  margin-top: 33px;
-  border: 45px solid #484848;
-  background-color: #fff; }
+body.view .contents {
+  width: 1200px; }
+  body.view .contents .message {
+    text-align: center; }
+    body.view .contents .message .title {
+      font-size: 48px;
+      color: #000;
+      line-height: 1.3em; }
+    body.view .contents .message .hash {
+      margin-top: 10px;
+      font-size: 24px;
+      color: #000;
+      line-height: 1.3em; }
+      body.view .contents .message .hash em {
+        display: block;
+        margin-top: 5px;
+        font-size: 18px;
+        color: #d3230c; }
+  body.view .contents .tictalk {
+    margin-top: 33px;
+    padding: 35px 50px;
+    border: 45px solid #484848;
+    background-color: #fff; }
 
 .popup-application {
   margin: 0 auto;
@@ -957,7 +1000,7 @@ body.view .contents .tictalk {
     margin-left: 630px;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -176px -86px;
+    background-position: -296px -172px;
     width: 31px;
     height: 31px; }
 
@@ -977,7 +1020,7 @@ body.view .contents .tictalk {
     margin-left: 420px;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -176px -86px;
+    background-position: -296px -172px;
     width: 31px;
     height: 31px; }
   .popup.event .mfp-close {
