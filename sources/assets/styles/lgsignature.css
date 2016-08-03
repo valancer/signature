@@ -213,6 +213,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* CONTENTS */
 article.contents {
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 100px;
   min-width: 1000px;
@@ -332,12 +333,12 @@ body.main .header .nav {
             height: 200px; }
         body.main .header .nav .list-menus > li a.gallery:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: -296px -86px;
+          background-position: 0px -252px;
           width: 80px;
           height: 80px; }
         body.main .header .nav .list-menus > li a.episode:before {
           background-image: url(/assets/images/sprites.png);
-          background-position: 0px -252px;
+          background-position: -296px -86px;
           width: 80px;
           height: 80px; }
     @media only screen and (min-width: 1201px) {
@@ -829,7 +830,7 @@ body.view .header .detail {
       line-height: 1.3em; }
     body.view .header .detail .hash dd {
       display: block;
-      padding: 21px 30px 28px 30px;
+      padding: 21px 15px 28px 15px;
       font-size: 10px;
       color: #919191;
       line-heightt: 17px;
@@ -847,14 +848,41 @@ body.view .header .detail {
           margin-right: 10px;
           vertical-align: middle;
           background-image: url(/assets/images/sprites.png);
-          background-position: -333px -172px;
+          background-position: -296px -218px;
           width: 22px;
           height: 19px; }
   body.view .header .detail .btns {
     padding-top: 28px;
     padding-bottom: 50px; }
+    body.view .header .detail .btns .btn-prev {
+      display: inline-block;
+      margin: 0 3px;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -176px -206px;
+      width: 40px;
+      height: 40px; }
+      body.view .header .detail .btns .btn-prev.disabled {
+        background-image: url(/assets/images/sprites.png);
+        background-position: -222px -206px;
+        width: 40px;
+        height: 40px; }
+    body.view .header .detail .btns .btn-next {
+      display: inline-block;
+      margin: 0 3px;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -296px -172px;
+      width: 40px;
+      height: 40px; }
+      body.view .header .detail .btns .btn-next.disabled {
+        background-image: url(/assets/images/sprites.png);
+        background-position: -86px -272px;
+        width: 40px;
+        height: 40px; }
     body.view .header .detail .btns .btn-main {
       display: inline-block;
+      margin-left: 10px;
       text-indent: -9999px;
       background-image: url(/assets/images/sprites.png);
       background-position: 0px -206px;
@@ -873,7 +901,7 @@ body.view .header .detail {
         padding: 30px 0 15px 0;
         font-size: 22px; }
       body.view .header .detail .hash dd {
-        padding: 30px 30px 40px 30px;
+        padding: 30px 15px 40px 15px;
         font-size: 14px;
         line-heightt: 24px; }
         body.view .header .detail .hash dd .like {
@@ -1003,7 +1031,7 @@ body.view .contents {
     margin-left: 630px;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -296px -172px;
+    background-position: -342px -172px;
     width: 31px;
     height: 31px; }
 
@@ -1023,7 +1051,7 @@ body.view .contents {
     margin-left: 420px;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -296px -172px;
+    background-position: -342px -172px;
     width: 31px;
     height: 31px; }
   .popup.event .mfp-close {

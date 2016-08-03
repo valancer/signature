@@ -7,7 +7,7 @@
 
 
 /* CONTENTS */
-article.contents { margin: 0 auto; padding: 100px; min-width: $contents-min-width - 200; max-width: $contents-max-width - 200;
+article.contents { box-sizing: border-box; margin: 0 auto; padding: 100px; min-width: $contents-min-width - 200; max-width: $contents-max-width - 200;
 }
 
 
@@ -175,14 +175,20 @@ body.view {
 			.title { margin-top: 14px; font-size: 17px; color: #ffffff; line-height: 22px; }
 			.hash { display: block; margin-top: 20px; border-top: 1px solid #080808; border-bottom: 1px solid #474747;
 				dt { display: none; padding: 21px 0 11px 0; font-size: 15px; color: #ffffff; border-top: 1px solid #474747; line-height: 1.3em; }
-				dd { display: block; padding: 21px 30px 28px 30px; font-size: 10px; color: #919191; line-heightt: 17px; text-align: left; word-breka: keep-all;
+				dd { display: block; padding: 21px 15px 28px 15px; font-size: 10px; color: #919191; line-heightt: 17px; text-align: left; word-breka: keep-all;
 					.like { display: block; margin: 25px auto 0; font-size: 11px; color: #ffffff; text-align: center;;
 						&:before { content: ''; display: inline-block; margin-right: 10px; vertical-align: middle; @include sprite($sd-icon-like); }
 					}
 				}
 			}
 			.btns { padding-top: 28px; padding-bottom: 50px;
-				.btn-main { display: inline-block; text-indent: -9999px; @include sprite($sd-btn-main); }
+				.btn-prev { display: inline-block; margin: 0 3px; text-indent: -9999px; @include sprite($sd-btn-prev);
+					&.disabled { @include sprite($sd-btn-prev-disabled); }
+				}
+				.btn-next { display: inline-block; margin: 0 3px; text-indent: -9999px; @include sprite($sd-btn-next);
+					&.disabled { @include sprite($sd-btn-next-disabled); }
+				}
+				.btn-main { display: inline-block; margin-left: 10px; text-indent: -9999px; @include sprite($sd-btn-main); }
 			}
 
 
@@ -192,7 +198,7 @@ body.view {
 				.title { margin-top: 20px; font-size: 24px; line-height: 32px; }
 				.hash { margin-top: 28px;
 					dt { padding: 30px 0 15px 0; font-size: 22px; }
-					dd { padding: 30px 30px 40px 30px; font-size: 14px; line-heightt: 24px;
+					dd { padding: 30px 15px 40px 15px; font-size: 14px; line-heightt: 24px;
 						.like { margin-top: 35px; font-size: 16px; }
 					}
 				}
