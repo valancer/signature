@@ -79,6 +79,8 @@ body.main {
 		.grid-item { display: block; position: relative; float: left; margin: 0.310559006211%; width: 21.739130434783%;
 			.content { display: block; }
 
+			img { max-height: 100%; max-width: 100%; }
+
 			&.line-breaker { clear: both; }
 			&.category { color: #fff; text-align: center; background-position: center center; background-size: 100%;
 				.content {

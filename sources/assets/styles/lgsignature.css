@@ -369,6 +369,9 @@ body.main .grid {
     width: 21.739130434783%; }
     body.main .grid .grid-item .content {
       display: block; }
+    body.main .grid .grid-item img {
+      max-height: 100%;
+      max-width: 100%; }
     body.main .grid .grid-item.line-breaker {
       clear: both; }
     body.main .grid .grid-item.category {
