@@ -31,7 +31,9 @@ body.main {
 					> li { display: block; box-sizing: border-box; float: left; padding: 15px 5px 0 5px; width: 50%; border-top: 1px solid #3b3b3b;
 
 						&.top { padding: 0 0 10px 0; width: 100%; font-size: 13px; color: #bbb; text-align: center; border-top: 0px; border-bottom: 1px solid #191919;
-							small { font-size: 10px; line-height: 15px; }
+							small { font-size: 10px; line-height: 15px;
+								.lg-signature { display: inline-block; margin-top: -2px; text-indent: -9999px; vertical-align: middle; @include retina-sprite($sm-lgsignature-group); }
+							}
 						}
 						&.last { clear: both; width: 100%; border: 0px; }
 
@@ -209,8 +211,8 @@ body.view {
 
 
 	// 사진전 소개
-	&.intro { padding-top: 25px; height: 550px; width: 300px; background: url('/assets/images/mobile/bg_popup01.jpg') center top no-repeat; background-size: 100%;
-		.content { margin: 0 auto; height: 425px; width: 250px; background: url('/assets/images/mobile/popup01.png') center top no-repeat; background-size: 100%;
+	&.intro { padding-top: 25px; height: 966px; width: 300px; background: url('/assets/images/mobile/bg_popup01.jpg') center top no-repeat; background-size: 100%;
+		.content { margin: 0 auto; height: 861px; width: 250px; background: url('/assets/images/mobile/popup01.png') center top no-repeat; background-size: 100%;
 			h2, p { display: none; }
 		}
 	}
@@ -219,8 +221,7 @@ body.view {
 	&.episode {
 		.content {
 			* { display: none; }
-			.photographer { display: block; height: 510px; width: 300px; background: url('/assets/images/mobile/popup03.jpg') center top no-repeat; background-size: 100%;; }
-			.episode-content { display: block; position: relative; height: 1169px; width: 300px; background: url('/assets/images/mobile/popup04.jpg') center top no-repeat; background-size: 100%;
+			.episode-content { display: block; position: relative; height: 1975px; width: 300px; background: url('/assets/images/mobile/popup04.jpg') center top no-repeat; background-size: 100%;
 				.btn-submit { display: block; position: absolute; bottom: 40px; left: 50%; margin: 0 0 0 -67px; }
 			}
 		}
