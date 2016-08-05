@@ -793,7 +793,8 @@ body.view .header .photo {
     display: block;
     position: absolute;
     z-index: 1;
-    text-indent: -9999px; }
+    text-indent: -9999px;
+    background: url("/assets/images/transparnet.png") left top no-repeat; }
 
 body.view .header .detail {
   text-align: center; }
@@ -862,11 +863,11 @@ body.view .header .detail {
       background-position: -176px -206px;
       width: 40px;
       height: 40px; }
-      body.view .header .detail .btns .btn-prev.disabled {
-        background-image: url(/assets/images/sprites.png);
-        background-position: -222px -206px;
-        width: 40px;
-        height: 40px; }
+    body.view .header .detail .btns span.btn-prev {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -222px -206px;
+      width: 40px;
+      height: 40px; }
     body.view .header .detail .btns .btn-next {
       display: inline-block;
       margin: 0 3px;
@@ -875,11 +876,11 @@ body.view .header .detail {
       background-position: -296px -172px;
       width: 40px;
       height: 40px; }
-      body.view .header .detail .btns .btn-next.disabled {
-        background-image: url(/assets/images/sprites.png);
-        background-position: -86px -272px;
-        width: 40px;
-        height: 40px; }
+    body.view .header .detail .btns span.btn-next {
+      background-image: url(/assets/images/sprites.png);
+      background-position: -86px -272px;
+      width: 40px;
+      height: 40px; }
     body.view .header .detail .btns .btn-main {
       display: inline-block;
       margin-left: 10px;
