@@ -101,6 +101,14 @@ body.view {
 			.btn-back { display: block; position: absolute; top: 1px; bottom: 0; left: 0; z-index: z("default"); text-indent: -9999px; @include retina-sprite($sm-btn-back-group); }
 
 			.title { font-size: 16px; color: #000; line-height: 45px; text-align: center; }
+
+			.right { display: block; position: absolute; top: 10px; right: 10px; vertical-align: middle;
+				.btn-prev { display: inline-block; text-indent: -9999px; @include retina-sprite($sm-btn-prev-group); }
+				span.btn-prev { @include retina-sprite($sm-btn-prev-disabled-group); }
+
+				.btn-next { display: inline-block; margin-left: 3px; text-indent: -9999px; @include retina-sprite($sm-btn-next-group); }
+				span.btn-next { @include retina-sprite($sm-btn-next-disabled-group); }
+			}
 		}
 
 		figure { display: block; position: relative; box-sizing: border-box; padding-top: 45px; width: 100%;

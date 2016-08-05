@@ -165,7 +165,7 @@ body.view {
 		.photo { display: block; position: relative; width: 100%; text-align: center; background-size: cover;
 			img { max-height: 100%; max-width: 100%; }
 
-			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; }
+			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background: url('/assets/images/transparnet.png') left top no-repeat; }
 		}
 
 		.detail { text-align: center;
@@ -182,12 +182,10 @@ body.view {
 				}
 			}
 			.btns { padding-top: 28px; padding-bottom: 50px;
-				.btn-prev { display: inline-block; margin: 0 3px; text-indent: -9999px; @include sprite($sd-btn-prev);
-					&.disabled { @include sprite($sd-btn-prev-disabled); }
-				}
-				.btn-next { display: inline-block; margin: 0 3px; text-indent: -9999px; @include sprite($sd-btn-next);
-					&.disabled { @include sprite($sd-btn-next-disabled); }
-				}
+				.btn-prev { display: inline-block; margin: 0 3px; text-indent: -9999px; @include sprite($sd-btn-prev); }
+				span.btn-prev { @include sprite($sd-btn-prev-disabled); }
+				.btn-next { display: inline-block; margin: 0 3px; text-indent: -9999px; @include sprite($sd-btn-next); }
+				span.btn-next { @include sprite($sd-btn-next-disabled); }
 				.btn-main { display: inline-block; margin-left: 10px; text-indent: -9999px; @include sprite($sd-btn-main); }
 			}
 
