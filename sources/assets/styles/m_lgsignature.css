@@ -256,13 +256,13 @@ article.contents {
     z-index: 1;
     text-indent: -9999px;
     background-image: url(/assets/images/mobile/sprites_mobile.png);
-    background-position: 0px -96px;
+    background-position: -86px -110px;
     width: 94px;
     height: 10px; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .header .btn-lg-signature {
         background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-        background-size: 170px 138px; } }
+        background-size: 199px 180px; } }
 
 body.main .header figure .photo {
   position: relative;
@@ -273,15 +273,20 @@ body.main .header figure .photo {
     display: block;
     position: absolute;
     top: 50%;
-    margin-top: -32px;
-    height: 64px;
-    width: 100%;
-    font-size: 30px;
-    color: #fffffe;
-    line-height: 1em;
-    text-align: center; }
+    left: 50%;
+    margin-top: -27px;
+    margin-left: -99.5px;
+    background-image: url(/assets/images/mobile/sprites_mobile.png);
+    background-position: 0px 0px;
+    width: 199px;
+    height: 54px;
+    text-indent: -9999px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      body.main .header figure .photo .title {
+        background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
+        background-size: 199px 180px; } }
     body.main .header figure .photo .title small {
-      font-size: 15px; }
+      display: none; }
 
 body.main .header figure figcaption {
   background-color: #191919; }
@@ -313,13 +318,13 @@ body.main .header figure figcaption {
             text-indent: -9999px;
             vertical-align: middle;
             background-image: url(/assets/images/mobile/sprites_mobile.png);
-            background-position: 0px -112px;
+            background-position: -86px -126px;
             width: 83px;
             height: 9px; }
             @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
               body.main .header figure figcaption .list-menus > li.top small .lg-signature {
                 background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-                background-size: 170px 138px; } }
+                background-size: 199px 180px; } }
       body.main .header figure figcaption .list-menus > li.last {
         clear: both;
         width: 100%;
@@ -347,22 +352,22 @@ body.main .header figure figcaption {
           color: #777; }
         body.main .header figure figcaption .list-menus > li a.gallery:before {
           background-image: url(/assets/images/mobile/sprites_mobile.png);
-          background-position: -100px 0px;
+          background-position: 0px -110px;
           width: 40px;
           height: 40px; }
           @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             body.main .header figure figcaption .list-menus > li a.gallery:before {
               background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-              background-size: 170px 138px; } }
+              background-size: 199px 180px; } }
         body.main .header figure figcaption .list-menus > li a.episode:before {
           background-image: url(/assets/images/mobile/sprites_mobile.png);
-          background-position: -46px -50px;
+          background-position: -146px -60px;
           width: 40px;
           height: 40px; }
           @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             body.main .header figure figcaption .list-menus > li a.episode:before {
               background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-              background-size: 170px 138px; } }
+              background-size: 199px 180px; } }
         body.main .header figure figcaption .list-menus > li a.event {
           padding: 0;
           text-align: center; }
@@ -557,13 +562,13 @@ body.view .header .navigation-bar {
     z-index: 1;
     text-indent: -9999px;
     background-image: url(/assets/images/mobile/sprites_mobile.png);
-    background-position: 0px 0px;
+    background-position: 0px -60px;
     width: 44px;
     height: 44px; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       body.view .header .navigation-bar .btn-back {
         background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-        background-size: 170px 138px; } }
+        background-size: 199px 180px; } }
   body.view .header .navigation-bar .title {
     font-size: 16px;
     color: #000;
@@ -579,43 +584,43 @@ body.view .header .navigation-bar {
       display: inline-block;
       text-indent: -9999px;
       background-image: url(/assets/images/mobile/sprites_mobile.png);
-      background-position: -146px 0px;
+      background-position: -90px -156px;
       width: 24px;
       height: 24px; }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         body.view .header .navigation-bar .right .btn-prev {
           background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-          background-size: 170px 138px; } }
+          background-size: 199px 180px; } }
     body.view .header .navigation-bar .right span.btn-prev {
       background-image: url(/assets/images/mobile/sprites_mobile.png);
-      background-position: -146px -30px;
+      background-position: -60px -156px;
       width: 24px;
       height: 24px; }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         body.view .header .navigation-bar .right span.btn-prev {
           background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-          background-size: 170px 138px; } }
+          background-size: 199px 180px; } }
     body.view .header .navigation-bar .right .btn-next {
       display: inline-block;
       margin-left: 3px;
       text-indent: -9999px;
       background-image: url(/assets/images/mobile/sprites_mobile.png);
-      background-position: -146px -60px;
+      background-position: -30px -156px;
       width: 24px;
       height: 24px; }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         body.view .header .navigation-bar .right .btn-next {
           background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-          background-size: 170px 138px; } }
+          background-size: 199px 180px; } }
     body.view .header .navigation-bar .right span.btn-next {
       background-image: url(/assets/images/mobile/sprites_mobile.png);
-      background-position: -146px -90px;
+      background-position: 0px -156px;
       width: 24px;
       height: 24px; }
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         body.view .header .navigation-bar .right span.btn-next {
           background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-          background-size: 170px 138px; } }
+          background-size: 199px 180px; } }
 
 body.view .header figure {
   display: block;
@@ -664,13 +669,13 @@ body.view .header .detail {
         margin-right: 10px;
         vertical-align: middle;
         background-image: url(/assets/images/mobile/sprites_mobile.png);
-        background-position: 0px -127px;
+        background-position: -120px -156px;
         width: 12px;
         height: 11px; }
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           body.view .header .detail .category .like:before {
             background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-            background-size: 170px 138px; } }
+            background-size: 199px 180px; } }
   body.view .header .detail .hash {
     display: block;
     position: relative;
@@ -697,6 +702,11 @@ body.view .header .detail {
       font-size: 10px;
       color: #919191;
       line-heightt: 14px; }
+
+body.view .header .about-link {
+  padding-left: 3.125%;
+  font-size: 10px;
+  color: #666; }
 
 body.view .contents {
   padding: 30px 3.125% 30px; }
@@ -730,7 +740,7 @@ body.view .contents {
   width: 34px;
   text-indent: -9999px;
   background-image: url(/assets/images/mobile/sprites_mobile.png);
-  background-position: -100px -46px;
+  background-position: -46px -110px;
   width: 34px;
   height: 34px;
   border: 1px solid #9d9d9d;
@@ -738,7 +748,7 @@ body.view .contents {
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .btn-top {
       background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-      background-size: 170px 138px; } }
+      background-size: 199px 180px; } }
   .btn-top:after {
     content: '';
     display: block;
@@ -841,13 +851,13 @@ body.view .contents {
     right: 0;
     text-indent: -9999px;
     background-image: url(/assets/images/mobile/sprites_mobile.png);
-    background-position: -50px 0px;
+    background-position: -50px -60px;
     width: 44px;
     height: 44px; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .popup-application .mfp-close {
         background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-        background-size: 170px 138px; } }
+        background-size: 199px 180px; } }
 
 .mfp-wrap {
   overflow-x: auto !important; }
@@ -863,13 +873,13 @@ body.view .contents {
     right: 0px;
     text-indent: -9999px;
     background-image: url(/assets/images/mobile/sprites_mobile.png);
-    background-position: -50px 0px;
+    background-position: -50px -60px;
     width: 44px;
     height: 44px; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .popup .mfp-close {
         background-image: url(/assets/images/mobile/sprites_mobile@2x.png);
-        background-size: 170px 138px; } }
+        background-size: 199px 180px; } }
   .popup.event .mfp-close {
     top: 10px;
     margin-left: 610px; }

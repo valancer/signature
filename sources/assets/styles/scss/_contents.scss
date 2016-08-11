@@ -25,23 +25,23 @@ body.main {
 		.photo { display: block; position: relative; width: 100%;
 			img { width: 100%; }
 			
-			.title { display: block; position: absolute; top: 50%; margin-top: -96px; height: 192px; width: 100%; font-size: 70px; color: #fffffe; line-height: 1em; text-align: center;
-				small { font-size: 36px; }
+			.title { display: block; position: absolute; top: 50%; left: 50%; margin-top: -$sd-txt-title01-height / 2; margin-left: -$sd-txt-title01-width / 2; @include sprite($sd-txt-title01); text-indent: -9999px;
+				small { display: none; }
 			}
 		}
 
 		.nav { height: 100%;
 			.list-menus { display: block; position: absolute; bottom: 0; right: 0; left: 0; padding: 0 20px; /* border-top: 1px solid #050505; */
 				> li { border-top: 1px solid #3b3b3b; border-bottom: 1px solid #050505;
-					&.top { border-top: 0px; padding: 0 0 10px 10px; font-size: 16px; line-height: 24px;
-						color: #fff;
-						small { font-size: 12px; line-height: 18px; }
+					&.top { border-top: 0px; padding: 0 0 40px 10px; font-size: 16px; color: #fff; line-height: 24px;
+						span { display: block; text-indent: -9999px; @include sprite($sd-txt-desc01); }
+						small { display: none; font-size: 12px; line-height: 18px; }
 					}
 					
 					&.last { border-bottom: 0px; }
 					&.none { border: 0px; }
 
-					a { display: block; position: relative; padding: 20px 0 10px 120px; min-height: 70px; font-size: 16px; color: #bbb; line-height: 29px;
+					a { display: block; position: relative; padding: 20px 0 20px 15px; min-height: 70px; font-size: 16px; color: #bbb; line-height: 29px;
 						&:before { content: ''; display: block; position: absolute; top: 10px; left: 15px; height: 80px; width: 80px; background-color: 100%; }
 
 						p { font-size: 12px; color: #777; }
@@ -50,25 +50,26 @@ body.main {
 							&:before { content: ''; position: static; @include sprite($sd-event-banner); }
 						}
 						&.gallery {
-							&:before { @include sprite($sd-bg-nav02); }
+							div { text-indent: -9999px; @include sprite($sd-bg-nav02); }
 						}
 						&.episode {
-							&:before { @include sprite($sd-bg-nav03); }
+							div { text-indent: -9999px; @include sprite($sd-bg-nav03); }
 						}
 					}
 				}
-
+/*
 				@include max-desktop() {
 					> li { border-top: 1px solid #3b3b3b; border-bottom: 1px solid #050505;
 						&.top { border-top: 0px; padding: 0 0 23px 15px; font-size: 18px; line-height: 28px; letter-spacing: -0.05em;
 							small { font-size: 14px; line-height: 25px; }
 						}
 
-						a { padding: 30px 0 20px 120px;
+						a { padding: 15px 0 20px 15px;
 							&:before { top: 20px; }
 						}
 					}
 				}
+*/
 			}
 		}
 	}
@@ -156,16 +157,16 @@ body.main {
 
 
 body.view { 
-	.header {
-
+	.header { overflow: visible;
 		figure { display: block; position: relative; box-sizing: border-box; padding-right: 360px; width: 100%;
 			figcaption { display: block; position: absolute; top: 0; right: 0; bottom: 0; height: 100%; width: 360px; background-color: #191919; }
 		}
 
 		.photo { display: block; position: relative; width: 100%; text-align: center; background-size: cover;
+			.photo-inner { display: inline-block; position: relative; }
 			img { max-height: 100%; max-width: 100%; }
 
-			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background: url('/assets/images/transparnet.png') left top no-repeat; }
+			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background: url('/assets/images/transparent.png') left top no-repeat; }
 		}
 
 		.detail { text-align: center;
@@ -203,6 +204,8 @@ body.view {
 				.btns { padding-top: 40px; padding-bottom: 50px; }
 			}
 		}
+
+		.about-link { position: absolute; bottom: -30px; right: 360px; font-size: 16px; color: #666; text-align: right; }
 	}
 
 

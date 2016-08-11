@@ -22,8 +22,8 @@ body.main {
 			.photo { position: relative; background-color: #999;
 				img { width: 100%; }
 
-				.title { display: block; position: absolute; top: 50%; margin-top: -32px; height: 64px; width: 100%; font-size: 30px; color: #fffffe; line-height: 1em; text-align: center;
-					small { font-size: 15px; }
+				.title { display: block; position: absolute; top: 50%; left: 50%; margin-top: -$sm-txt-title01-height/2; margin-left: -$sm-txt-title01-width/2; @include retina-sprite($sm-txt-title01-group); text-indent: -9999px;
+					small { display: none; }
 				}
 			}
 			figcaption { background-color: #191919;
@@ -57,7 +57,6 @@ body.main {
 				}
 			}
 		}
-
 	}
 
 
@@ -138,8 +137,9 @@ body.view {
 				}
 				dd { display: block; padding: 0px 0 0 0; font-size: 10px; color: #919191; line-heightt: 14px; }
 			}
-
 		}
+
+		.about-link { padding-left: 3.125%; font-size: 10px; color: #666; }
 	}
 
 	.contents { padding: 30px 3.125% 30px;
