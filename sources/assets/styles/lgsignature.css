@@ -233,7 +233,7 @@ article.contents {
     z-index: 1;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -296px -270px;
+    background-position: -288px -289px;
     width: 144px;
     height: 14px; }
 
@@ -310,7 +310,7 @@ body.main .header .nav {
           display: block;
           text-indent: -9999px;
           background-image: url(/assets/images/sprites.png);
-          background-position: 0px -344px;
+          background-position: 0px -138px;
           width: 297px;
           height: 99px; }
         body.main .header .nav .list-menus > li.top small {
@@ -349,20 +349,19 @@ body.main .header .nav {
           body.main .header .nav .list-menus > li a.event:before {
             content: '';
             position: static;
-            background-image: url(/assets/images/sprites.png);
-            background-position: 0px -138px;
+            height: 200px;
             width: 290px;
-            height: 200px; }
+            background: url("/assets/images/event_banner.png") left top no-repeat; }
         body.main .header .nav .list-menus > li a.gallery div {
           text-indent: -9999px;
           background-image: url(/assets/images/sprites.png);
-          background-position: 0px -449px;
+          background-position: 0px -243px;
           width: 282px;
           height: 80px; }
         body.main .header .nav .list-menus > li a.episode div {
           text-indent: -9999px;
           background-image: url(/assets/images/sprites.png);
-          background-position: -296px -138px;
+          background-position: -303px -138px;
           width: 207px;
           height: 80px; }
 
@@ -795,9 +794,9 @@ body.view .header {
     text-align: center;
     background-size: cover; }
     body.view .header .photo .photo-inner {
-      display: inline-block;
       position: relative; }
     body.view .header .photo img {
+      display: inline-block;
       max-height: 100%;
       max-width: 100%; }
     body.view .header .photo .btn-external-link {
@@ -859,7 +858,7 @@ body.view .header {
             margin-right: 10px;
             vertical-align: middle;
             background-image: url(/assets/images/sprites.png);
-            background-position: -471px -290px;
+            background-position: -261px -329px;
             width: 22px;
             height: 19px; }
     body.view .header .detail .btns {
@@ -870,12 +869,12 @@ body.view .header {
         margin: 0 3px;
         text-indent: -9999px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -388px -290px;
+        background-position: -86px -329px;
         width: 40px;
         height: 40px; }
       body.view .header .detail .btns span.btn-prev {
         background-image: url(/assets/images/sprites.png);
-        background-position: -296px -290px;
+        background-position: -132px -329px;
         width: 40px;
         height: 40px; }
       body.view .header .detail .btns .btn-next {
@@ -883,12 +882,12 @@ body.view .header {
         margin: 0 3px;
         text-indent: -9999px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -342px -290px;
+        background-position: -464px -243px;
         width: 40px;
         height: 40px; }
       body.view .header .detail .btns span.btn-next {
         background-image: url(/assets/images/sprites.png);
-        background-position: -472px -224px;
+        background-position: -178px -329px;
         width: 40px;
         height: 40px; }
       body.view .header .detail .btns .btn-main {
@@ -896,7 +895,7 @@ body.view .header {
         margin-left: 10px;
         text-indent: -9999px;
         background-image: url(/assets/images/sprites.png);
-        background-position: -296px -224px;
+        background-position: -288px -243px;
         width: 170px;
         height: 40px; }
     @media only screen and (min-width: 1201px) {
@@ -1049,7 +1048,7 @@ body.view .contents {
     margin-left: 630px;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -434px -290px;
+    background-position: -224px -329px;
     width: 31px;
     height: 31px; }
 
@@ -1069,7 +1068,7 @@ body.view .contents {
     margin-left: 420px;
     text-indent: -9999px;
     background-image: url(/assets/images/sprites.png);
-    background-position: -434px -290px;
+    background-position: -224px -329px;
     width: 31px;
     height: 31px; }
   .popup.event .mfp-close {

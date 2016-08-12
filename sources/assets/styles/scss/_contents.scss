@@ -47,7 +47,7 @@ body.main {
 						p { font-size: 12px; color: #777; }
 
 						&.event { padding: 0 0 15px 15px; height: 200px; text-align: left; text-indent: -9999px; 
-							&:before { content: ''; position: static; @include sprite($sd-event-banner); }
+							&:before { content: ''; position: static; height: 200px; width: 290px; background: url('/assets/images/event_banner.png') left top no-repeat; }
 						}
 						&.gallery {
 							div { text-indent: -9999px; @include sprite($sd-bg-nav02); }
@@ -163,8 +163,8 @@ body.view {
 		}
 
 		.photo { display: block; position: relative; width: 100%; text-align: center; background-size: cover;
-			.photo-inner { display: inline-block; position: relative; }
-			img { max-height: 100%; max-width: 100%; }
+			.photo-inner { position: relative; }
+			img { display: inline-block; max-height: 100%; max-width: 100%; }
 
 			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background: url('/assets/images/transparent.png') left top no-repeat; }
 		}

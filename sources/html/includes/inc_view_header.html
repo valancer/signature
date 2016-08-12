@@ -1,31 +1,28 @@
 <a href="https://www.lge.co.kr/lgekor/lgsignature/lgsignatureMain.do" class="btn-lg-signature">LG SIGNATURE</a>
 
 <figure>
-	@@if( bg === true ) {
-		<div class="photo" style="background-image: url('/assets/images/@@bg-image');">
-	}
-	@@if( bg === false ) {
-		<div class="photo">
-	}
-		<div class="photo-inner">
+@@if( bg === true ) {
+	<div class="photo" style="background-image: url('/assets/images/@@bg-image');">
+}
+@@if( bg === false ) {
+	<div class="photo">
+}
 			<img src="/assets/images/@@photo" alt="">
-
-			@@if( category == "01" ) {
-				<a href="https://www.lge.co.kr/lgekor/lgsignature/lgsignatureMain.do" class="btn-external-link" target="_blank" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
-			}
-			@@if( category == "02" ) {
-				<a href="https://www.lge.co.kr/lgekor/product/media/tv/productDetail.do?cateId=1160&prdId=EPRD.298198" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
-			}
-			@@if( category == "03" ) {
-				<a href="https://www.lge.co.kr/lgekor/product/kitchen/refrigerator/productDetail.do?cateId=4140&prdId=EPRD.299241" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
-			}
-			@@if( category == "04" ) {
-				<a href="https://www.lge.co.kr/lgekor/product/household-appliances/washing-machine/productDetail.do?prdId=EPRD.303459" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
-			}
-			@@if( category == "05" ) {
-				<a href="https://www.lge.co.kr/lgekor/product/aircare/air-cleaner/productDetail.do?cateId=6260&prdId=EPRD.304799" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
-			}
-		</div>
+		@@if( category == "01" ) {
+			<a href="https://www.lge.co.kr/lgekor/lgsignature/lgsignatureMain.do" class="btn-external-link" target="_blank" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
+		}
+		@@if( category == "02" ) {
+			<a href="https://www.lge.co.kr/lgekor/product/media/tv/productDetail.do?cateId=1160&prdId=EPRD.298198" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
+		}
+		@@if( category == "03" ) {
+			<a href="https://www.lge.co.kr/lgekor/product/kitchen/refrigerator/productDetail.do?cateId=4140&prdId=EPRD.299241" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
+		}
+		@@if( category == "04" ) {
+			<a href="https://www.lge.co.kr/lgekor/product/household-appliances/washing-machine/productDetail.do?prdId=EPRD.303459" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
+		}
+		@@if( category == "05" ) {
+			<a href="https://www.lge.co.kr/lgekor/product/aircare/air-cleaner/productDetail.do?cateId=6260&prdId=EPRD.304799" target="_blank" class="btn-external-link" style="top: @@top; left: @@left; height: @@height; width: @@width;">바로가기 링크</a>
+		}
 	</div>
 
 	<figcaption class="detail">
