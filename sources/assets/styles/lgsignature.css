@@ -795,8 +795,10 @@ body.view .header {
     text-align: center;
     background-size: cover; }
     body.view .header .photo .photo-inner {
-      display: inline-block;
-      position: relative; }
+      display: block;
+      position: relative;
+      width: auto;
+      border: 3px solid #0f0; }
     body.view .header .photo img {
       max-height: 100%;
       max-width: 100%; }
