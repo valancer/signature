@@ -47,7 +47,7 @@ body.main {
 						p { font-size: 12px; color: #777; }
 
 						&.event { padding: 0 0 15px 15px; height: 200px; text-align: left; text-indent: -9999px; 
-							&:before { content: ''; position: static; @include sprite($sd-event-banner); }
+							&:before { content: ''; position: static; height: 200px; width: 290px; background: url('/assets/images/event_banner.png') left top no-repeat; }
 						}
 						&.gallery {
 							div { text-indent: -9999px; @include sprite($sd-bg-nav02); }
@@ -163,8 +163,13 @@ body.view {
 		}
 
 		.photo { display: block; position: relative; width: 100%; text-align: center; background-size: cover;
+<<<<<<< HEAD
 			.photo-inner { display: block; position: relative; width: auto; border: 3px solid #0f0; }
 			img { max-height: 100%; max-width: 100%; }
+=======
+			.photo-inner { position: relative; }
+			img { display: inline-block; max-height: 100%; max-width: 100%; }
+>>>>>>> 74468d52cc574b5f6cae4e263e0752df6b746c97
 
 			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background: url('/assets/images/transparent.png') left top no-repeat; }
 		}
