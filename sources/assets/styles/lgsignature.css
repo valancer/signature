@@ -1153,3 +1153,44 @@ body.view .contents {
     line-height: 70px;
     text-align: center;
     background-color: #e64f3c; }
+
+/* event summary */
+.event-summary {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  right: 360px;
+  padding: 51px 20px 0 20px;
+  height: 638px;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.9); }
+  .event-summary .contents {
+    background-color: #545454; }
+    .event-summary .contents .btn-close {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      text-indent: -9999px;
+      background-image: url(/assets/images/sprites.png);
+      background-position: -224px -329px;
+      width: 31px;
+      height: 31px; }
+    .event-summary .contents .inner-contents {
+      height: 528px;
+      width: 460px;
+      background-position: left top;
+      background-repeat: no-repeat; }
+      .event-summary .contents .inner-contents * {
+        display: none; }
+    .event-summary .contents .do-not-open {
+      padding: 0 16px;
+      height: 40px; }
+      .event-summary .contents .do-not-open input[type=checkbox] {
+        display: inline-block;
+        vertical-align: middle; }
+      .event-summary .contents .do-not-open label {
+        font-size: 15px;
+        color: #ffffff;
+        line-height: 40px;
+        vertical-align: middle; }

@@ -163,14 +163,8 @@ body.view {
 		}
 
 		.photo { display: block; position: relative; width: 100%; text-align: center; background-size: cover;
-<<<<<<< HEAD
-			.photo-inner { display: block; position: relative; width: auto; border: 3px solid #0f0; }
-			img { max-height: 100%; max-width: 100%; }
-=======
 			.photo-inner { position: relative; }
 			img { display: inline-block; max-height: 100%; max-width: 100%; }
->>>>>>> 74468d52cc574b5f6cae4e263e0752df6b746c97
-
 			.btn-external-link { display: block; position: absolute; z-index: z("default"); text-indent: -9999px; background: url('/assets/images/transparent.png') left top no-repeat; }
 		}
 
@@ -310,5 +304,25 @@ body.view {
 
 	.btn-submit { display: block; margin: 50px auto 0; width: 270px; font-size: 20px; color: #ffffff; line-height: 70px; text-align: center; background-color: #e64f3c; }
 }
+
+
+
+
+
+/* event summary */
+.event-summary { box-sizing: border-box; position: absolute; bottom: 0; right: 360px; padding: 51px 20px 0 20px; height: 638px; width: 500px; background-color: rgba(0, 0, 0, 0.9);
+	.contents { background-color: #545454;
+		.btn-close { display: block; position: absolute; top: 10px; right: 20px; text-indent: -9999px; @include sprite($sd-btn-close); }
+
+		.inner-contents { height: 528px; width: 460px; background-position: left top; background-repeat: no-repeat;
+			* { display: none; }
+		}
+		.do-not-open { padding: 0 16px; height: 40px; 
+			input[type=checkbox] { display: inline-block; vertical-align: middle; }
+			label { font-size: 15px; color: #ffffff; line-height: 40px; vertical-align: middle; }
+		}
+	}
+}
+
 
 

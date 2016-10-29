@@ -36,15 +36,6 @@
 								<p>자세히보기 &gt;</p>
 							</a>
 						</li>
-						<li class="last">
-							<a href="#popup-event" class="event">
-								<div class="aspect">
-									<div class="inner">
-										
-									</div>	
-								</div>
-							</a>
-						</li>
 					</ul>
 				</nav>
 			</figcaption>
@@ -332,6 +323,56 @@
 
 		</article>
 	</main>
+
+
+	<!-- 이벤트 요약 -->
+	<aside id="event-summary" class="popup event-summary mfp-hide">
+		<div class="contents">
+			<button type="button" class="btn-close mfp-close">닫기</button>
+			<div class="inner-contents" style="background-image: url(/assets/images/mobile/event_popup.jpg);">
+				<h2 class="title">LG SIGNATURE 사진전 - SNS 확산 이벤트</h2>
+				<p>당신에게 영감을 주는 LG 시그니처 최고의 작품을 SNS에 공유하면 추첨을 통해 선물을 드립니다.</p>
+				<p>
+					이벤트 기간 : 2016년 8월 19일 ~ 9월 19일<br>
+					당첨자 발표 : 2016년 9월 30일<br>
+	 			</p>
+
+	 			<h3>참여방법</h3>
+				<ol>
+					<li>페이지를 스크롤하고, 마음에 드는 사진을 선택한다.</li>
+					<li>SNS에 로그인을하여 감상평을 남긴다.</li>
+					<li>댓글 작성 완료 후 응모팝업에 개인정보를 입력한다.</li>
+				</ol>
+			</div>
+
+			<fieldset class="do-not-open">
+				<legend>오늘 하루 열지 않음</legend>
+
+				<input type="checkbox" name="not-today" id="not-today">
+				<label for="not-today">오늘 하루동안 열지 않음</label>
+			</fieldset>
+		</div>
+	</aside>
+	<script>
+	$(document).ready(function(e) {
+		// 이벤트 요약
+		$.magnificPopup.open({
+			items: {
+				src: '#event-summary',
+			},
+			alignTop: true,
+			fixedContentPos: true,
+			mainClass: 'mfp-fade',
+			closeOnContentClick: false,
+			closeOnBgClick: true,
+			callbacks: {
+				close: function() {
+					alert('close');
+				}
+			}
+    	}, 0);
+	});
+	</script>
 
 
 	<!-- 이벤트 소개 -->
